@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-set-cho</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+    <svg id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+   
+	<h1>svgex</h1>
+	<h2>line</h2>
+	<svg class="svg01" width="300" height="300">
+		<line x1="0" y1="0" x2="300" y2="300">
+		</line>
+		<style>
+			.svg01{
+				border:1px solid #000;
+			}
+			.svg01 line{
+				stroke:#000;
+				stroke-width:3px;
+			}
+		</style>
+	</svg>
+	<svg class="svg02" width="300" height="300">
+		<line x1="0" y1="0" x2="300" y2="300">
+		</line>
+		<line x1="20" y1="0" x2="300" y2="300">
+		</line>
+		<line x1="40" y1="0" x2="300" y2="300">
+		</line>
+		<style>
+			.svg02{
+				background:rgba(0,0,0,.2);
+				border:1px solid #000;
+			}
+			.svg02 line{
+				stroke:blueviolet;
+				stroke-width:3px;
+			}
+		</style>
+	</svg>
+	<svg class="svg03" width="300" height="300">
+		<line x1="0" y1="0" x2="300" y2="300">
+		</line>
+		<line x1="20" y1="20" x2="300" y2="300">
+		</line>
+		<line x1="40" y1="40" x2="300" y2="300">
+		</line>
+		<style>
+			.svg03{
+				border:1px solid #000;
+			}
+			.svg03 line:nth-of-type(1){
+				stroke:crimson;
+				stroke-width:4px;
+			}
+			.svg03 line:nth-of-type(2){
+				stroke:#38a734;
+				stroke-width:4px;
+			}
+			.svg03 line:nth-of-type(3){
+				stroke:yellow;
+				stroke-width:4px;
+			}
+		</style>
+	</svg>
+	<svg class="svg04" width="200" height="200">
+		<rect x="40" y="40" width="100" height="100">
+		</rect>
+		<style>
+			.svg04{
+				border:1px solid #000;
+			}
+		</style>
+	</svg>
+	<svg class="svg05" width="200" height="200">
+		<rect  x="50" y="50" width="100" height="100"></rect>
+		<line x1="0" y1="0" x2="200" y2="200"></line>
+		<style>
+			.svg05{
+				border:1px solid #000;
+			}
+			.svg05 line{
+				stroke:crimson;
+				stroke-width:5px;
+			}
+		</style>
+	</svg>
+	<svg class="svg06" width="300" height="300">
+		<line x1="0" y1="300" x2="300" y2="0"></line>
+		<line x1="40" y1="260" x2="300" y2="0"></line>
+		</line>
+		<style>
+			.svg06{
+				border:1px solid #000;
+			}
+			.svg06 line:nth-of-type(1){
+				stroke:#000;
+				stroke-width:4px;
+			}
+			.svg06 line:nth-of-type(2){
+				stroke:red;
+				stroke-width:4px;
+			}
+		</style>
+	</svg>
+	<a href="#">
+		<svg class="svg07" width="300" height="300">
+			<rect x="100" y="100" width="100" height="100" rx="20" ry="20"></rect>
+			<rect x="110" y="110" width="80" height="80" rx="15" ry="15"></rect>
+			<style>
+				.svg07{
+					border:1px solid #000;
+				}
+				.svg07:hover rect:nth-of-type(1){
+					transform:rotate(45deg);
+				}
+				.svg07:hover rect:nth-of-type(2){
+					transform:rotate(-45deg);
+				}
+				.svg07 rect:nth-of-type(1){
+					fill:coral;
+					transition: all 0.5s ease 0s;
+					transform-origin:center;
+				}
+				.svg07 rect:nth-of-type(2){
+					fill:red;
+					transition: all 0.5s ease 0s;
+					transform-origin:center;
+				}
+			</style>
+		</svg>
+	</a>
+	<svg class="svg08" width="300" height="300">
+		<circle cx="150" cy="150" r="100"></circle>
+		<circle cx="120" cy="120" r="20" style="fill:#fff"></circle>
+		<circle cx="120" cy="120" r="10"></circle>
+		<circle cx="180" cy="120" r="20" style="fill:#fff"></circle>
+		<circle cx="180" cy="120" r="10"></circle>
+		<line x1="100" y1="200" x2="200" y2="200" style="stroke:#f54d10;stroke-width:3px;"></line>
+		<style>
+			.svg08{
+				border:1px solid #000;
+			}
+		</style>
+	</svg>
+	<svg class="svg09" width="300" height="300">
+		<!-- <ellipse cx="150" cy="100" rx="100" ry="60"></ellipse>
+		<ellipse cx="150" cy="200" rx="100" ry="60"></ellipse> -->
+		<ellipse cx="150" cy="150" rx="60" ry="110"></ellipse>
+		<ellipse cx="180" cy="150" rx="60" ry="110"></ellipse>
+		<style>
+			.svg09{
+				border:1px solid #000;
+			}
+			.svg09 ellipse{
+				fill:none;
+				stroke:#000;
+				stroke-width:5px;
+			}
+		</style>
+	</svg>
+	
+</body>
+</html> 

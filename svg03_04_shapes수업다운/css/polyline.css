@@ -1,0 +1,19 @@
+@charset "utf-8";
+.view01 polyline{
+    fill:#000;
+    fill-rule: nonzero;
+    /* fill-rule: evenodd; */
+    fill-opacity: 0.1;
+    stroke-opacity:1;
+    stroke:purple;
+    stroke-width:1px;
+}
+.view02 polyline{
+    fill:rgb(42, 63, 250);
+    fill-rule: nonzero;
+ /*    fill-rule: evenodd; */
+    fill-opacity: 0.1;
+    stroke-opacity:1;
+    stroke:purple;
+    stroke-width:1px;
+}

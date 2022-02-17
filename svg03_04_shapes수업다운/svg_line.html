@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>basic-shapes-line</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<link rel="stylesheet" href="css/line.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+	<h1>basic-shapes</h1>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+	<h2>line</h2>
+	<svg class="view01" width="300" height="300">
+		<line x1="0" y1="0" x2="300" y2="300" />
+		<line x1="20" y1="0" x2="300" y2="300" />
+		<line x1="40" y1="0" x2="300" y2="300" />
+	</svg>
+	<svg class="view02" width="300" height="300">
+		<line x1="0" y1="0" x2="300" y2="300"/>
+		<line x1="20" y1="20" x2="300" y2="300"/>
+		<line x1="40" y1="40" x2="300" y2="300"/>
+		
+	</svg>
+	<p>
+		line tag는 viewbox가 실행안됨
+<!-- 		x1 속성은 x-axis 에서 라인의 시작을 정의
+		y1 속성은 y-axis 에서 라인의 시작을 정의
+		x2 속성은 x-axis 에서 라인의 끝을 정의
+		y2 속성은 y-axis 에서 라인의 끝을 정의 -->
+	</p>
+	<svg class="view03" width="300" height="300">
+		<line x1="20" y1="50" x2="250" y2="50" />
+		<line x1="20" y1="90" x2="250" y2="90" />
+		<line x1="20" y1="130" x2="250" y2="130" />
+		<line x1="20" y1="160" x2="250" y2="160" />
+		<line x1="20" y1="190" x2="250" y2="190" />
+		<line x1="20" y1="230" x2="290" y2="230" />
+	</svg>
+</body>
+
+</html>

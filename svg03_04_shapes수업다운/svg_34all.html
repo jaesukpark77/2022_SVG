@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>svg-set-cho</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+  <style>
+    svg {
+      display: inline-block;
+      border: 1px solid #000
+    }
+  </style>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h1>34_all</h1><!--  -->
+  <h2>view01circle</h2>
+  <a href="#">
+    <svg class="view01" width="100" height="100" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40"></circle>
+      <style>
+        .view01 {fill: none;stroke: #000;stroke-width: 8px; }
+        .view01 circle{
+          transform-origin: center;
+          transition:all 1s ease 0s;
+        }
+        .view01:hover circle{
+          transform: scale(0.3);
+          stroke-width:400;
+          stroke:#cc00a0;
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view02line</h2>
+  <a href="#">
+    <svg class="view02" width="100" height="100" viewBox="0 0 100 100">
+      <line x1="20" y1="10" x2="20" y2="90"></line>
+      <line x1="40" y1="10" x2="40" y2="90"></line>
+      <line x1="60" y1="10" x2="60" y2="90"></line>
+      <line x1="80" y1="10" x2="80" y2="90"></line>
+      <style>
+        .view02 { fill: none;stroke: #000;stroke-width: 8px;}
+        .view02 line{
+          transform-origin: center;
+          transition:all 1s ease 0s;
+        }
+        .view02:hover line{
+          transform:rotate(45deg)
+        }
+        .view02:hover{
+          background: rgb(220, 20, 210);
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view03-polygon3</h2>
+  <a href="#">
+    <svg class="view03" width="100" height="100" viewBox="-10 -10 120 120">
+      <polygon points="50,0 100,100 0,100"></polygon>
+      <style>
+        .view03 {
+          fill: none;
+          stroke: #000;
+          stroke-width: 8px;
+        }
+        .view03 polygon{
+          transform-origin: center;
+          transition:all 1s ease 0s;
+        }
+        .view03:hover polygon{
+          transform:translateX(120px)
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view04polygon5</h2>
+  <a href="#">
+    <svg class="view04" width="100" height="100" viewBox="-10 -10 120 120">
+      <polygon points="50,0  100,30  100,70 80,100 20,100 0,70 0,30">
+      </polygon>
+      <style>
+        .view04 {
+          fill: none;
+          stroke: #000;
+          stroke-width: 8px;
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view05polyline</h2>
+  <a href="#">
+    <svg class="view05" width="100" height="100" viewBox="-10 -10 100 100">
+      <polyline points=" 0,0 40,0 40,40 80,40  80,80 ">
+      </polyline>
+      <style>
+        .view05 {
+          fill: none;
+          stroke: #000;
+          stroke-width: 8px;
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view06 rect</h2>
+  <a href="#">
+    <svg class="view06" width="100" height="100" viewBox="0 0 100 100">
+      <rect x="10" y="10" width="80" height="80" rx="10" ry="10"></rect>
+      <circle cx="30" cy="40" r="10"></circle>
+      <circle cx="30" cy="40" r="5"></circle>
+      <circle cx="70" cy="40" r="10"></circle>
+      <circle cx="70" cy="40" r="5"></circle>
+      <style>
+        .view06 {
+          fill: #000;
+          stroke: #000;
+          stroke-width: 8px;
+        }
+        .view06 circle{
+          fill:#fff;
+          stroke-width:0; 
+          display: none;         
+        }
+
+        .view06 circle:nth-child(3){
+          fill:#000;
+        }
+        .view06 circle:nth-child(5){
+          fill:#000;
+        }
+          .view06:hover circle{
+            display: block;
+          }
+      </style>
+    </svg>
+  </a>
+  <h2>view07 star</h2>
+  <a href="#">
+    <svg class="view07" width="100" height="100" viewBox="-10 -10 120 120">
+      <polygon points="50,0 20,100 100,35 0,35 80,100"></polygon>
+      <style>
+        .view07 {
+          fill: #000;
+          stroke: #000;
+          stroke-width: 8px;
+          stroke-dasharray: 6px 3px;
+          stroke-linecap: butt;
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view08 butterfly</h2>
+  <a href="#">
+    <svg class="view08" width="100" height="100" viewBox="-10 -10 120 120">
+      <polygon  points="0,10 100,100 0,100 100,10"></polygon>
+      <style>
+        .view08 {
+          fill: #000;
+          stroke: #000;
+          stroke-width: 8px;
+          stroke-dasharray: 4px 2px;
+          stroke-linecap: butt;
+        }
+      </style>
+    </svg>
+  </a>
+  <h2>view09 ellipse</h2>
+  <a href="#">
+    <svg class="view09" width="100" height="100" viewBox="-10 -10 120 120">
+      <ellipse cx="50" cy="50" rx="50" ry="30">
+      </ellipse>
+      <style>
+        .view09 {
+          fill: none;
+          stroke: #000;
+          stroke-width: 8px;
+          stroke-dasharray: 3px 5px;
+          stroke-dashoffset: 0px;
+        }
+        .view09 ellipse{
+          transition:all 1s ease 0s;
+        }
+        .view09:hover ellipse{
+          stroke-dasharray: 3px 5px;
+          stroke-dashoffset: 20px;
+        }
+      </style>
+    </svg>
+  </a>
+</body>
+</html>
