@@ -1,0 +1,28 @@
+@charset "utf-8";
+.view08 path{
+  fill:rgb(90, 145, 108);
+  fill-opacity: 1;
+  stroke-width: 2;
+  stroke:#000;
+}
+.view08 .rc{
+  fill:#fff;
+  stroke-width:2px;
+  stroke:#000;
+}
+
+.view08 .lc{
+  fill:#000;
+  stroke-width:2px;
+  stroke:#000;
+}
+
+.view08 .cc{
+  fill:#fff;
+  stroke-width:2px;
+  stroke:#000;
+}
+.view08 line{
+  stroke-width: 5px;
+  stroke:#000;
+}

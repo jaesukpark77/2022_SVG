@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>composite01</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="css/com01.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h1>path_com01</h1>
+  <h2>하트직선</h2>
+  <svg class="view01" width="200" height="200" viewbox=" 0 0 200 200">
+    <path d="M 150 50
+           L  100  20,
+           L  50 50,
+           L 100 100, z
+    ">
+    </svg> 
+    <h2>하트</h2>   
+  <svg class="view02" width="200" height="200" viewbox=" 0 0 200 200">
+  <path d="M 150 50
+       A 1 1,0 0 0, 100  20,
+       A 1 1,0 0 0, 50 50,
+       L 100 100, z
+  ">
+  </svg>
+  <h2>별직선</h2>
+  <svg class="view03" width="200" height="200" viewbox=" 0 0 200 200">
+    <path d="M 16 48
+          L  32 38,
+          L  48 48,
+          L 38 32,
+          L 48 16,
+          L 32 26,
+          L 16 16,
+          L 26 32,
+          L16 48 Z
+    ">
+    </svg>
+    <h2>강아지</h2>
+    <svg class="view04" width="200" height="200" viewbox=" 0 0 200 200">
+      <path class="dog" d="M 90 70,
+            L  90 40,
+            Q 90.5 40.5, 100  50,
+            L 160 70,
+            Q 160 90, 120 100,
+            L 120 120,
+            L 110 120,
+            L 110 110,
+            L 100 110,
+            L 100 120,
+            L 90 120,
+            L 90 110,
+            L 80 110,
+            L 80 120,
+            L 70 120,
+            L 70 110,
+            L 60 110,
+            L 60 120,
+            L 50 120,
+            Q 50 90,30 70,Z
+      "></path>
+      <circle class="rc" r="10" cx="115" cy="70"></circle>
+      <circle class="lc" r="5" cx="110" cy="70"></circle>
+      <!-- <circle class="cc" r="3" cx="109" cy="68"></circle> -->
+      <line x1="140" y1="85" x2="150" y2="85"></line>
+      </svg>
+</body>
+</html>

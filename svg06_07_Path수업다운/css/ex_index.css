@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.ani_box01{
+  position: relative;
+  width:100px;
+  height:100px;
+  /* border:1px solid #000; */
+ 
+}
+.view02{
+  background: none;
+  border:2px dotted #000;
+}
+
+.body{
+  position: absolute;
+  z-index: -10;
+  top:40px;left:20px;
+}
+/* face */
+.view02 path:nth-of-type(1){
+  fill:#ebcf98;
+  stroke:coral;
+  stroke-width: 1px;
+}
+/* .view02 path:nth-of-type(1)[Attributes Style] {
+  d: path('M16 24, 
+  C16 16, 16 8, 32 8,
+  C44 8, 48 10, 48 22,
+  C48 34, 48 44, 32 44,
+  C18 44, 16 38, 16 24 Z');
+} */
+.view02 circle:nth-of-type(1),.view02 circle:nth-of-type(3){
+ fill:#fff;
+}
+
+.view02 rect{
+  fill:transparent;
+  stroke:#000;
+  stroke-width: 1px;
+  fill: white;
+  transform-origin:30%;
+  transform:scaleX(0);
+  transition:all 0.3s ease 0s;
+}
+
+
+.view02:hover rect{
+   transform:scale(1)
+}
+
+
+.monster{
+  background: none;
+  border:2px dotted #000; 
+}
+
+.monster path{
+  fill:#df51fc
+}
+.monster circle:nth-of-type(1){
+  fill:#fff;
+  stroke:#000;
+}
+
+
+.cloud_monsvg{
+  border:2px solid #000;
+  background: #000;
+}
+.cloud_monsvg .cloud_mon{
+ fill:#fff
+}
+
+.cloud_monsvg .left_foot{
+  fill:#ff8e43;
+}
+
+.cloud_monsvg .right_foot{
+  fill:#d343ff;
+}
+
+.cloud_monsvg .left_hand{
+  fill:#d6fc31;
+}
+
+.cloud_monsvg .right_hand{
+  fill:#ff6f43;
+}
+.cloud_monsvg .mon_face{
+  fill:#17a798;
+}
+
+.cloud_monsvg .rc{
+  fill:#fff;
+}
+
+.cloud_monsvg .lc{
+  fill:#000;
+}
+
+.cloud_monsvg .mouth{
+  stroke:tomato;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}

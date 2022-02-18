@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>path</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="css/path.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <!--  <path  d="패스 데이터"  pathlength="길이"></path> -->
+  <h2>삼각형1</h2>
+  <svg class="view01" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M 0 0 
+    L 100 0 
+    L 0 50 Z">
+    </path>
+  </svg>
+
+  <h2>삼각형2</h2>
+  <svg class="view02" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M 0 0 
+    L 100 0 
+    L 100 50 Z">
+    </path>
+  </svg>
+
+  <h2>정사각형</h2>
+  <svg class="view03" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M 0 0 
+    L 100 0 
+    L 100 100
+    L 0  100 Z">
+    </path>
+  </svg>
+
+  <h2>사다리꼴</h2>
+  <svg class="view04" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M 20 0 
+      L 80 0 
+      L 100 100
+      L 0 100 Z">
+    </path>
+  </svg>
+
+  <h2>오각형1</h2>
+  <svg class="view05" width="100" height="100" viewbox="">
+    <path d=" M 50 0
+   L 100 30 
+   L 80 90
+   L 20 90 
+   L 0 30 Z">
+    </path>
+  </svg>
+
+  <h2>오각형2</h2>
+  <svg class="view06" width="100" height="100" viewbox="0 0 100 100">
+    <path d=" M 20 0 
+    L 80 0 
+    100 50
+    50 100
+    0 50 Z
+    ">
+    </path>
+  </svg>
+
+  <h2>육각형1</h2>
+  <svg class="view07" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M20 0
+    L 80 0 
+    L 100 40 
+    L 80 90
+    L 20 90 
+    L0 40 Z
+    ">
+    </path>
+  </svg>
+
+  <h2>육각형2</h2>
+  <svg class="view08" width="100" height="100" viewbox="0 0 100 100">
+    <path d="M 50 0
+    L 100 30 
+    L 100 70 
+    L 50 100
+    L 0 70
+    L 0 30 Z
+    ">
+    </path>
+  </svg>
+</body>
+</html>

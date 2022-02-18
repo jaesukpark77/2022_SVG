@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>quadratic01</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="css/path.css" type="text/css">
+  <link rel="stylesheet" href="css/quadratic.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h1>quadratic01</h1>
+  <h2>삼각형</h2>
+  <svg class="view01" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 48 48 
+          L 32 16
+          L 16 48 Z
+    ">32
+    </path>
+  </svg>
+  <svg class="view02" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 48 48 
+           Q 48 26,32 16,
+           Q 16 26, 16 48 Z
+    ">
+    </path>
+  </svg>
+  <h2>사각형</h2>
+  <svg class="view03" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 48 48 
+           Q 34 36,32 16,
+           Q 32 36, 16 48 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view04" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 48 48 
+           Q 20 36,32 16,
+           Q 44 38, 16 48 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view05" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 38 42 
+           Q 20 36,32 16,
+           Q 44 38, 24 42 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view06" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 16 48 
+           L 16 16
+           L 48 16
+           L 48 48 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view07" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 16 48 
+           Q 8 30,16 16
+           Q 32 8, 48 16
+           Q 56 32, 48 48 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view08" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 16 48 
+           L 12 22
+           L 32 10
+           L 52 20
+           L 48 48 Z
+    ">
+    </path>
+  </svg>
+  <svg class="view09" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 16 48 
+           L 12 22
+           Q 18 10, 32 10
+           Q 44 10, 52 20
+           L 48 48 Z
+    ">
+    </path> 
+  </svg>
+  <svg class="view10" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 22 42
+           L 22 24,
+           L 16 10,
+           L 32 18,
+           L 46 10, 
+           L 42 24,
+           L 42 42 Z
+    ">
+    </path> 
+  </svg>
+  <svg class="view11" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 22 42
+           L 22 24,
+           L 16 10,
+           L 32 18,
+           L 46 10, 
+           L 42 24,
+           L 42 42 Z22
+    ">
+    </path> 
+  </svg>
+  <svg class="view11" width="100" height="100" viewbox=" 0 0 100 100">
+    <path d="M 22 42
+           Q 16 30, 22 24,
+           Q 16 18,16 10,
+           Q 24 10, 32 18,
+           Q 36 10,46 10, 
+           Q 46 18,42 24,
+           Q 46 32,42 42 Z
+    ">
+    </path> 
+  </svg>
+</body>
+</html>

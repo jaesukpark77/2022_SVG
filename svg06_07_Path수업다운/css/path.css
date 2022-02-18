@@ -1,0 +1,158 @@
+@charset "utf-8";
+ 
+.view01 path{
+    fill:#000;
+    fill-rule: nonzero;
+    /* fill-rule: evenodd; */
+    fill-opacity: 0.1;
+    stroke:purple;
+    stroke-width:1px; 
+    stroke-opacity:1;
+  /*   stroke-linecap: butt;
+    stroke-linecap: round;
+    stroke-linecap: square; */
+}
+
+.view02 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(0, 128, 21);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+
+.view03 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(219, 93, 34);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view04 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(7, 4, 146);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view05 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(146, 21, 4);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view06 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(146, 21, 4);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view07 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(146, 21, 4);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view07 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(146, 21, 4);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view08 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(146, 21, 4);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view09 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(40, 122, 77);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view10 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(141, 40, 145);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/* stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}
+
+.view11 path{
+  fill:#000;
+  fill-rule: nonzero;
+  /* fill-rule: evenodd; */
+  fill-opacity: 0.1;
+  stroke:rgb(141, 40, 145);
+  stroke-width:1px; 
+  stroke-opacity:1;
+/*   stroke-linecap: butt;
+  stroke-linecap: round;
+  stroke-linecap: square; */
+}

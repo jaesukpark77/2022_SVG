@@ -1,0 +1,27 @@
+@charset "utf-8";
+.dog{
+  fill:#47b0ca;
+  stroke-width:2px;
+  stroke:rgb(56, 115, 163);
+}
+.view04 .rc{
+  fill:#fff;
+  stroke-width:1px;
+  stroke:none;
+}
+
+.view04 .lc{
+  fill:#000;
+  stroke-width:0px;
+  stroke:#000;
+}
+
+.view04 .cc{
+  fill:#fff;
+  stroke-width:1px;
+  stroke:#000;
+}
+.view04 line{
+  stroke-width: 1px;
+  stroke:#000;
+}
