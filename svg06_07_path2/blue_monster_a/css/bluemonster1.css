@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* mon_01svg */
+.mon_01svg{
+  border:1px solid #000;
+  background: rgb(213, 252, 250);
+  
+}
+
+.mon_01svg ellipse{
+  fill:#000;
+  fill-opacity: 0.1;
+}
+.mon_01svg .mon_body{
+  fill:#0ec6e7;
+  filter: drop-shadow(-1px 1px 2px rgba(50, 50, 0, 0.5));
+}
+
+.mon_01svg .mon_leftfoot{
+  fill:#0ec6e7;
+}
+
+.mon_01svg .mon_rightfoot{
+  fill:#0ec6e7;
+}
+
+.mon_01svg .rc{
+  fill:#fff;
+  filter: drop-shadow(-1px 1px 0px rgba(50, 50, 0, 0.5));
+}
+
+.mon_01svg .lc{
+  fill:#0f0f0f;
+}
+
+.mon_01svg  .mouth_line1{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+}
+
+.mon_01svg  .mouth_line2{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+}
+
+.mon_01svg  .mouth_line3{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+}
+
+.mon_01svg .close_top{
+  fill:#0ec6e7;
+  transform:scale(1,0);
+  transform-origin: 50% 30%;
+  transition:all 0.1s ease 0s;
+}
+.mon_01svg:hover .close_top{
+  transform:scale(1,1)
+}
+
+
+.mon_01svg .close_bottom{
+  fill:#0ec6e7;
+  transform:scale(1,0);
+  transform-origin: 50% 60%;
+  transition:all 0.1s ease 0s;
+}
+.mon_01svg:hover .close_bottom{
+  transform:scale(1,1)
+}
+.mon_01svg .eye_line{
+  stroke-width: 3px;
+  stroke:#1eb0ca;
+  stroke-opacity: 0;
+  transition:all 0.1s ease 0s;
+  
+}
+.mon_01svg:hover .eye_line{
+  stroke-opacity: 1;
+  
+}

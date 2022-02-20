@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* blue-monter03 */
+/* mon_03svg */
+.mon_03svg{
+  border:1px solid #000;
+  background: rgb(213, 252, 250);
+  
+}
+
+.mon_03svg ellipse{
+  fill:#000;
+  fill-opacity: 0.1;
+}
+.mon_03svg .mon_body{
+  fill:#0ec6e7;
+  transition:all 0.7s ease 0s;
+  filter: drop-shadow(-1px 1px 2px rgba(50, 50, 0, 0.5));
+}
+
+.mon_03svg:hover .mon_body{
+  transform:skew(2deg,-2deg);
+}
+
+.mon_03svg .mon_leftfoot{
+  fill:#0ec6e7;
+  /* transition:all 1s ease 0s; */
+}
+
+/* .mon_03svg:hover .mon_leftfoot{
+  fill:#f04014;
+} */
+
+.mon_03svg .mon_rightfoot{
+  fill:#0ec6e7;
+  /* transition:all 1s ease 0s; */
+}
+
+/* .mon_03svg:hover .mon_rightfoot{
+  fill:#f04014;
+} */
+
+
+/* .mon_03svg .rc{
+  fill:#fff;
+  filter: drop-shadow(-1px 1px 0px rgba(50, 50, 0, 0.5));
+}
+
+.mon_03svg .lc{
+  fill:#0f0f0f;
+} */
+
+/* .mon_03svg .mouth_line1{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+  transition:all 0.8s ease 0.6s;
+} */
+
+/* 올라가는 입 */
+/* .mon_03svg:hover .mouth_line1{
+d:path("M 78,133  Q 105,108 129,133 ")
+
+} */
+
+/* .mon_03svg .mouth_line2{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+} */
+
+/* .mon_03svg .mouth_line3{
+  fill:transparent;
+  stroke-width:2px;
+  stroke:#000;
+} */
+
+/* .mon_03svg .close_top{
+  fill:#0ec6e7;
+  transform:scale(1,0);
+  transform-origin: 50% 30%;
+  transition:all 0.1s ease 0s;
+} */
+
+/* .mon_03svg:hover .close_top{
+  transform:scale(1,1)
+} */
+
+/* .mon_03svg .close_bottom{
+  fill:#0ec6e7;
+  transform:scale(1,0);
+  transform-origin: 50% 60%;
+  transition:all 0.1s ease 0s;
+} */
+/* .mon_03svg:hover .close_bottom{
+  transform:scale(1,1)
+} */
+/* .mon_03svg .head_line{
+  fill:#0ec6e7;
+  filter: drop-shadow(0px 2px 1px rgba(50, 50, 0, 0.5));
+  transition:all 1s ease 0.4s;
+} */
+
+/* .mon_03svg:hover .head_line{
+  fill:#f04014;
+  d:path("M 67,70  L 101,100 L 136,70 ");
+} */
+
+.mon_03svg .sleep_line{
+  fill:#0ec6e7;
+  transition:all 0.6s ease 0s;
+  filter: drop-shadow(0px 3px 1px rgba(50, 50, 0, 0.5));
+}
+
+.mon_03svg:hover .sleep_line{
+  transform:translateY(5px);
+  
+}
+
+
+.mon_03svg .laugh{
+  fill:#ad7390;
+  stroke:#ac587f;
+  transition:all 0.6s ease 0s;
+  
+}
+
+.mon_03svg:hover .laugh{
+  d:path("M 81,113 C 90,102 110,101 123,113 C 137,126 130,136 119,133 C 105,130 99,130 86,135 C 74,139 70,131 81,113 Z");
+}
+
+/* 원애니메이션 */
+.circle_svg{
+  border:1px solid #000;
+ }
+ 
+ .circle_svg circle {
+   fill: white;
+   fill-opacity: 0;
+   stroke: rgb(211, 40, 145);
+   stroke-width: 3px;
+   transition:all 1s ease 0s;
+   transform-origin: 50% 50%;
+ }
+ 
+ .circle_svg circle:hover {
+   stroke-opacity: 0;
+   stroke-width: 0;
+   transform: scale(2);
+ }

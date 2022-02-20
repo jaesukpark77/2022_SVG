@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>path</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="css/bluemonster1.css" type="text/css">
+  <link rel="stylesheet" href="css/bluemonster2.css" type="text/css">
+  <link rel="stylesheet" href="css/bluemonster3.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h1>path</h1>
+  <h2>파란몬스터</h2>
+  <a href="#" class="blue_monter01_box">
+    <svg class="mon_01svg" width="200px" height="200px" viewbox="0 0 200 200">
+
+      <ellipse class="shadow" cx="95" cy="165" rx="80" ry="20">
+      </ellipse>
+
+      <path class="mon_leftfoot"
+            d="M 48,135 
+            Q 46,159 61,176
+            Q 78,169 84,154 Z">
+      </path>
+
+      <path class="mon_rightfoot" 
+            d="M 126,156
+            Q 128,169 141,176
+            Q 156,161 157,136 Z">
+      </path>
+
+      <path class="mon_body" d="M106,32  
+                  C 145,32 168,54 171,94
+                  C 171,132 149,167 103,166
+                  C 67,166 33,146 36,93
+                  C 36,72 56,32 106,32 Z ">
+      </path>
+      <circle class="rc" r="25" cx="100" cy="95"></circle>
+      <circle class="lc" r="8" cx="100" cy="105"></circle>
+
+      <path class="mouth_line1" 
+                  d="M 78,130 
+                   Q 107,146 129,129 ">
+      </path>
+
+      <path class="mouth_line2" d="M 80,126 L 76,133 ">
+      </path>
+
+      <path class="mouth_line3" d=" M 127,126 L131,131">
+      </path>
+
+      <rect class="close_bottom" x="67" y="92" width="70" height="35">
+      </rect>
+
+      <rect class="close_top" x="67" y="58" width="70" height="35">
+      </rect>
+      <line class="eye_line" x1="80" y1="95" x2="122" y2="95"></line>
+    </svg>
+  </a>
+ <!--  blue_monter01_box-end-->
+
+ <h2>blue_monter02_box</h2>
+ <a href="#" class="blue_monter02_box">
+  <svg class="mon_02svg" width="200px" height="200px" viewbox="0 0 200 200">
+    <ellipse class="shadow" cx="95" cy="165" rx="80" ry="20">
+    </ellipse>
+
+    <path class="mon_leftfoot" d="M 48,135 
+      Q 46,159 61,176
+      Q 78,169 84,154 Z
+      ">
+    </path>
+
+    <path class="mon_rightfoot" d="M 126,156
+      Q 128,169 141,176
+      Q 156,161 157,136 Z
+      ">
+    </path>
+
+    <path class="mon_body" d="M106,32  
+      C 145,32 168,54 171,94
+      C 171,132 149,167 103,166
+      C 67,166 33,146 36,93
+      C 36,72 56,32 106,32 Z
+      ">
+    </path>
+    <circle class="rc" r="25" cx="100" cy="95"></circle>
+    <circle class="lc" r="8" cx="100" cy="105"></circle>
+
+    <path class="mouth_line1" d="M 78,130 
+      Q 107,146 129,129 "> 
+    </path>
+
+    <path class="mouth_line2" d="M 80,126 L 76,136 ">
+    </path>
+
+    <path class="mouth_line3" d=" M 127,126 L 131,136">
+    </path>
+
+    <path class="head_line" d="M 67,70  L 101,88 L 136,70 ">
+    </path>
+<!-- 
+    <rect class="close_bottom" x="67" y="92" width="70" height="35">
+    </rect>
+
+    <rect class="close_top" x="67" y="58" width="70" height="35">
+    </rect>
+    <line class="eye_line" x1="80" y1="95" x2="122" y2="95"></line> -->
+  </svg>
+</a>
+<!--  blue_monter01_box-end-->
+
+
+<h2>blue_monter03_box</h2>
+<a href="#" class="blue_monter03_box">
+  <svg class="mon_03svg" width="200px" height="200px" viewbox="0 0 200 200">
+    <ellipse class="shadow" cx="95" cy="165" rx="80" ry="20">
+    </ellipse>
+
+    <path class="mon_leftfoot" d="M 48,135 
+      Q 46,159 61,176
+      Q 78,169 84,154 Z
+      ">
+    </path>
+
+    <path class="mon_rightfoot" d="M 126,156
+      Q 128,169 141,176
+      Q 156,161 157,136 Z
+      ">
+    </path>
+
+    <path class="mon_body" d="M106,32  
+      C 145,32 168,54 171,94
+      C 171,132 149,167 103,166
+      C 67,166 33,146 36,93
+      C 36,72 56,32 106,32 Z
+      ">
+    </path>
+
+    <!-- 뜬눈
+    <circle class="rc" r="25" cx="100" cy="95"></circle>
+    <circle class="lc" r="8" cx="100" cy="105"></circle> -->
+
+  <!-- 올라가는 입  
+    <path class="mouth_line1" d="M 78,130 
+      Q 107,146 129,129 "> 
+    </path>
+
+    <path class="mouth_line2" d="M 80,126 L 76,136 ">
+    </path>
+
+    <path class="mouth_line3" d=" M 127,126 L 131,136">
+    </path> -->
+
+    <!-- <path class="head_line" d="M 67,70  L 101,88 L 136,70 ">
+    </path> -->
+  <!-- 눈깜빡
+    <rect class="close_bottom" x="67" y="92" width="70" height="35">
+    </rect>
+
+    <rect class="close_top" x="67" y="58" width="70" height="35">
+    </rect> -->
+    <path class="sleep_line" d="M 66,82 Q79,95 103,94 Q 123,94 137,79 Z"></path>
+
+    <path class="laugh" d="M 84,122
+    C 99,116 105,116 124,122 
+    C 137,126 130,136 119,133
+    C 105,130 99,130 86,135
+    C 74,139 68,131 84,122 Z
+    "></path>
+  </svg>
+</a>
+<!--  blue_monter01_box-end-->
+
+<h2>원애니</h2>
+<a href="#">
+  <svg class="circle_svg" width="100px" height="100px" viewbox="0 0 100 100">
+    <circle cx="50%" cy="50%" r="10px">
+  </svg>
+</a>
+</body>
+</html>

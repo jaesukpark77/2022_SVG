@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-set-cho</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+    <svg  id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+	<h1>mon</h1>
+	<a href="#">
+		<svg class="mon01" width="200" height="200" style="border:1px solid #000">
+			<path class="left_leg" d="M 52 114 Q 43 161 62 174 Q 84 164 91 145 L 52 114 Z"></path>
+			<path class="right_leg" d="M 120 144 Q 121 163 139 175 Q 160 152 153 110 L 120 144 Z"></path>
+			<path class="face" d="M 103 35 Q 161 35 168 93 T 103 165 Q 28 154 36 94 T 103 35 Z"></path>
+			<circle class="eye" cx="98" cy="95" r="25"></circle>
+			<circle class="small_eye" cx="98" cy="100" r="10"></circle>
+			<path class="mouth" d="M 78 129 Q 108 147 127 128 "></path>
+			<rect class="top" x="70" y="68" width="55" height="27" style="fill:gold;"></rect>
+			<rect class="bottom" x="70" y="94" width="55" height="27" style="fill:gold;"></rect>
+			<style>
+				.mon01{
+					background:cornflowerblue;
+				}
+	
+				.mon01 .face{
+					fill:gold;
+					filter:drop-shadow(0px 2px 2px rgba(0,0,0,.5));
+				}
+	
+				.mon01 .left_leg{
+					fill:gold;	
+				}
+	
+				.mon01 .right_leg{
+					fill:gold;	
+				}
+	
+				.mon01 .eye{
+					fill:#fff;
+				}
+	
+				.mon01 .small_eye{
+					filter:drop-shadow(0px 2px 1px rgba(0,0,0,.5));
+				}
+	
+				.mon01 .mouth{
+					fill:none;
+					stroke:#000;
+					stroke-width:4px;
+					stroke-linecap:round;
+				}
+
+				.mon01 .top{
+					transform:scale(1,0);
+					transition:all 0.3s ease 0s;
+					transform-origin:50% 30%;
+				}
+
+				.mon01:hover .top{
+					transform:scale(1,1)
+				}
+
+				.mon01 .bottom{
+					transform:scale(1,0);
+					transition:all 0.3s ease 0s;
+					transform-origin:50% 65%;
+				}
+
+				.mon01:hover .bottom{
+					transform:scale(1,1)
+
+				}
+			</style>
+		</svg>
+	</a>
+</body>
+</html> 
