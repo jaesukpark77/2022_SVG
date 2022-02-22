@@ -1,0 +1,67 @@
+@charset "utf-8";
+html,
+body {
+  height: 100vmax;
+}
+
+#back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+}
+
+svg{
+ display: block;
+ border:1px solid #000;
+}
+
+.view01 {
+  background: rgba(248, 252, 195, 0.5);
+}
+
+.view02 {
+  background: rgba(195, 251, 253, 0.5);
+}
+
+.view03 {
+  background: rgba(252, 182, 229, 0.5);
+}
+
+.view04 {
+  background: rgba(226, 226, 226, 0.5);
+}
+
+.view05 {
+  background: rgba(246, 190, 237, 0.5);
+}
+
+.view06 {
+  background: rgba(204, 231, 82, 0.5);
+}
+
+.view07 {
+  background: rgba(231, 154, 82, 0.5);
+}
+
+.view08 {
+  background: rgba(171, 82, 231, 0.5);
+}
+
+.view09 {
+  background: rgba(110, 200, 236, 0.5);
+}
+
+.view10 {
+  background: rgba(246, 178, 181, 0.5);
+}
+
+.view11 {
+  background: rgba(118, 192, 127, 0.5);
+}
+
+.view12 {
+  background: rgba(220, 236, 160, 0.5);
+}

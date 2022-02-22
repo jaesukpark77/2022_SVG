@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>svg_basic_text</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap">
+
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h2>x,y-1</h2>
+  <svg class="text01" width="200" height="100" viewbox="0 0 200 100">
+    <!-- x y -->
+    <text x="10" y="40">Hello svg World!</text>
+    <style type="text/css">
+      .text01 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>text-anchor-2</h2>
+  <svg class="text02" width="200" height="200" viewbox="0 0 200 200">
+    <!-- x y -->
+    <text text-anchor="start" x="60" y="40">A</text>
+    <text text-anchor="middle" x="60" y="75">A</text>
+    <text text-anchor="end" x="60" y="110">A</text>
+    <!-- Materialization of anchors -->
+    <circle cx="60" cy="40" r="3" fill="red" />
+    <circle cx="60" cy="75" r="3" fill="red" />
+    <circle cx="60" cy="110" r="3" fill="red" />
+
+    <style type="text/css">
+      .text02 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>dominant-baseline-3</h2>
+  <svg class="text03" width="200" height="100" viewbox="0 0 200 100">
+    <path d="M20,20 L180,20 M20,50 L180,50 M20,80 L180,80" stroke="grey" />
+    <text dominant-baseline="auto" x="30" y="20">Auto</text>
+    <text dominant-baseline="middle" x="30" y="50">Middle</text>
+    <text dominant-baseline="hanging" x="30" y="80">Hanging</text>
+
+    <style type="text/css">
+      .text03 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>중앙정렬</h2>
+  <svg class="center" width="200" height="100" viewbox="0 0 200 100">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">svg TEXT</text>
+    <style type="text/css">
+      .center {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>dx,dy-4</h2>
+  <svg class="text04" width="200" height="100" viewbox="0 0 300 150">
+    <!-- dx dy -->
+    <text x="0" y="0" dx="20" dy="40">Hello svg World!</text>
+    <style type="text/css">
+      .text04 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>rotate-5</h2>
+  <!--별도의 설정이 안된 글자는 마지막 값을 따른다-->
+  <svg class="text05" width="200" height="100" view="0 0 300 150">
+    <text x="10" y="50" rotate="4, 8, -8, -4, -20, -24, 48, 10">Hello svg World</text>
+    <style type="text/css">
+      .text05 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2rem;
+        border: 1px solid #000;
+      }
+    </style>
+  </svg>
+
+  <h2>textLength-6</h2>
+  <svg class="text06" width="200" height="150" viewbox="0 0 200 150">
+    <text x="0" y="50" textLength="100%">
+      Hello svg
+    </text>
+    <style>
+      .text06 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 3rem;
+      }
+    </style>
+  </svg>
+
+  <h2>lengthAdjust-spacingAndGlyphs-7</h2>
+  <svg class="text07" width="200" height="150" viewbox="0 0 200 150">
+    <text x="0" y="50" textLength="100%" lengthAdjust="spacingAndGlyphs">
+      Hello svg
+    </text>
+    <style>
+      .text07 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 3rem;
+      }
+    </style>
+  </svg>
+
+  <h2>tspan-8</h2>
+  <svg class="text08" x="0" y="0" width="200" height="150" viewbox="0 0 200 150">
+    <text x="0" y="50">
+     <tspan dx="10" dy="30" rotate="4,30,-4,2">svg</tspan>
+     <tspan dx="0" dy="20" textLength="80">text</tspan>
+     <tspan dx="-20" dy="20">is</tspan>
+     <tspan dx="-100" dy="20">cool</tspan>
+    </text>
+    <style>
+      .text08{
+        font-family: 'Leckerli One', cursive;
+      }
+      .text08 tspan:nth-child(1){
+        font-size: 4rem;
+      }
+      .text08 tspan:nth-child(2){
+        font-size: 2rem;
+      }
+      .text08 tspan:nth-child(3){
+        font-size: 5rem;
+      }
+      .text08 tspan:nth-child(4){
+        font-size: 3rem;
+        fill:blueviolet;
+        stroke-width:1px;
+        stroke:cadetblue;
+        stroke-dasharray: 2px 1px;
+      }
+    </style>
+  </svg>
+
+  <h2>word-spacing/letter-spacing-9/css으로도 가능</h2>
+  <svg class="text09" width="300" height="150" viwebox="0 0 300 150">
+     <text x="10" y="30">
+       <tspan dx="0" dy="0"> word spacing </tspan>
+       <tspan dx="-220" dy="40">letter spacing</tspan>
+     </text>
+     <style>
+       .text09{
+        font-family: 'Leckerli One', cursive;
+        text-transform: uppercase;
+        font-size:1.5rem;
+       }
+       .text09 tspan:nth-child(1){
+         word-spacing:40px;
+       }
+       .text09 tspan:nth-child(2){
+        letter-spacing:5px;
+      }
+     </style>
+  </svg>
+  <h2>text-decoration-10/css 로도 가능</h2>
+  <svg class="text10" width="300" height="250" viewbox="0 0 300 250">
+    <text x="10" y="40">overline</text>
+    <text x="10" y="80">underline</text>
+    <text x="10" y="140">line-througth</text>
+    <style>
+      .text10{
+        font-family: 'Leckerli One', cursive;
+        font-size:3rem;
+      }
+      .text10 text:nth-child(1){
+        text-decoration: underline;
+      }
+      .text10 text:nth-child(2){
+        text-decoration:line-through
+      }
+      .text10 text:nth-child(3){
+        text-decoration:overline;
+        font-size:4rem;
+        fill:coral;
+        stroke:crimson;
+        stroke-dasharray: 2px 1px;
+
+      }      
+    </style>
+  </svg>
+</body>
+
+</html>
