@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>trans-ani-3d</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<link rel="stylesheet" href="css/3d_ani.css" type="text/css">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+	<h1>3d-anibox</h1>
+	<div class="rotate_box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+	</div>
+
+
+	<h2>js_move</h2>
+	<div class="move_box_wrap">
+		<div class="move_box">
+			circle-animation
+		</div>
+	</div>
+
+	<div class="move_box1_wrap">
+		<div class="move_box1">
+		-animation
+		</div>
+	</div>
+
+	<script>
+		$(function () {
+			$('.rotate_box').on({
+				mouseenter: function () {
+					$(this).addClass('on')
+				}
+			}) //on
+
+			$('.rotate_box').on({
+				mouseleave: function () {
+					$(this).stop().removeClass('on')
+				}
+			}) //on	
+		}); //
+	</script>
+
+<script>
+	var rota1 = $('.move_box');
+	if (rota1.length > 0) {
+			var offset = rota1.offset();
+
+			function mouseB(evt) {
+					var center_x = (offset.left);
+					var center_y = (offset.top);
+					var mouse_x = evt.pageX;
+					var mouse_y = evt.pageY;
+					var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+					var degree = (radians * (360 / Math.PI) * -2);
+					rota1.css('-moz-transform', 'rotate(' + degree + 'deg)');
+					rota1.css('-webkit-transform', 'rotate(' + degree + 'deg)');
+					rota1.css('-o-transform', 'rotate(' + degree + 'deg)');
+					rota1.css('-ms-transform', 'rotate(' + degree + 'deg)');
+			}
+			$('.move_box').mousemove(mouseB);
+	}
+</script>
+
+<script>
+	var rota = $('.move_box1');
+	if (rota.length > 0) {
+			var offset = rota.offset();
+
+			function mouseB(evt) {
+					var center_x = (offset.left);
+					var center_y = (offset.top);
+					var mouse_x = evt.pageX;
+					var mouse_y = evt.pageY;
+					var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+					var degree = (radians * (360 / Math.PI) * -2);
+					rota.css('-moz-transform', 'rotate(' + degree + 'deg)');
+					rota.css('-webkit-transform', 'rotate(' + degree + 'deg)');
+					rota.css('-o-transform', 'rotate(' + degree + 'deg)');
+					rota.css('-ms-transform', 'rotate(' + degree + 'deg)');
+			}
+			$('.move_box1').mousemove(mouseB);
+	}
+</script>
+</body>
+
+</html>

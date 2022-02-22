@@ -1,0 +1,200 @@
+@charset "utf-8";
+body{
+  font-size:1.6rem;
+}
+.perspective_box01{
+  width:200px;
+  height:200px;
+  border:1px solid #000;
+  margin:40px;
+}
+.perspective_box01 p{
+  width:100px;
+  height:100px;
+  background: coral;
+  transform:rotateY(45deg);
+}
+
+/* perspective 부모 */
+
+.perspective_box02{
+ width:200px;
+ height:200px;
+ border:1px solid #000;
+ margin:40px;
+ perspective:400px;
+ /* transform-style: preserve-3d; */
+}
+
+.perspective_box02 p{
+  width:100px;
+  height:100px;
+  background: coral;
+  transform:rotateY(45deg);
+}
+
+/* perspective 자식 */
+.perspective_box03{
+  width:200px;
+  height:400px;
+  margin:40px;
+  border:1px solid #000;
+  perspective: 400px;
+}
+
+.perspective_box03 p{
+  width:100px;
+  height:100px;
+  margin:20px;
+  background: coral;
+  transform: perspective(400px) rotateY(45deg);
+}
+
+/* perspective & translate */
+a{display:block;
+  width:200px;
+  padding:10px;
+  border:1px solid #000;
+}
+.perspective_box04{
+  width:200px;
+  height:200px;
+  margin:40px;
+  border:1px solid #000;
+  perspective: 400px;
+}
+
+.perspective_box04 p{
+  display: block;
+  width:100px;
+  height:100px;
+  margin:20px;
+  background: coral;
+  transition: all 0.3s ease 0s;
+}
+
+.perspective_box04 p:target {
+  transform: translateZ(150px);
+}
+
+/* 트랜스폼 속성 적용 순서에 따른 효과 */
+a{display:block;
+  width:200px;
+  padding:10px;
+  border:1px solid #000;
+}
+.perspective_box05{
+  width:200px;
+  height:200px;
+  margin:40px;
+  border:1px solid #000;
+  perspective: 400px;
+}
+
+.perspective_box05 p{
+  display: block;
+  width:100px;
+  height:100px;
+  margin:20px;
+  background: coral;
+  transition: all 0.3s ease 0s;
+}
+
+.perspective_box05 p:target {
+  transform:translateY(200px) rotate(45deg);
+  transform:rotate(45deg) translateY(200px);
+}
+
+/* backface-visibility 예제 */
+
+.card{
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin:40px;
+  position: relative;
+  transform-style: preserve-3d;
+  border:1px solid #000;
+ transition:all 1s ease 0s;
+}
+
+.face_front{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  backface-visibility:hidden;
+  background: crimson;
+}
+
+.face_back{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  background: #1e8a8a;
+  transform:rotateY(180deg);
+  backface-visibility: hidden;
+}
+ .card:target {
+  transform: rotateY(180deg);
+  /* transform: rotateX(360deg); */
+}
+
+
+/* image & box contents flip 예제 */
+.flip_wrap{
+  position:relative;
+  width:200px;
+  height: 200px;
+  margin: 40px;
+  border:1px solid #000;
+  transform-style: preserve-3d;
+   perspective: 400px;
+
+}
+
+.front_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: darksalmon;
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+}
+
+
+.back_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #6da37d;
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+  transform: rotateY(-180deg);
+}
+.flip_wrap>div>img{
+  width:100%;
+  height:100%;
+  }
+
+.flip_wrap.on .front_card{
+  transform: rotateY(180deg);
+}
+.flip_wrap.on .back_card{
+  transform:rotateY(0deg);
+}
+
+/* .flip_wrap.on{
+  transform: rotateY(180deg);
+} */

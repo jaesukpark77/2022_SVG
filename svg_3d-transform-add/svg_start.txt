@@ -1,0 +1,192 @@
+https://yqnn.github.io/svg-path-editor/
+https://jxnblk.github.io/paths/?d=M8%2048%20L56%2048%20L32%2012%20Z
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-set-cho</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+    <svg width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+   
+        
+   
+</body>
+</html> 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+@charset "utf-8";
+/*@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+ font-family:nbgR;
+ src:url(fonts/NanumBarunGothic.eot?#iefix) format("embedded-opentype");
+ src:url(fonts/NanumBarunGothic.woff) format("woff");
+}*/
+
+/*reset*/
+/*scroll-bar 없애기*/
+/*html,body{width:100%;height:100%;-ms-overflow-style: none; }
+body::-webkit-scrollbar {display: none;}*/
+
+/* placeholder 지정할것 */
+/* ::-webkit-input-placeholder{font-size:12px;color:#333}
+::-moz-input-placeholder{ font-size:12px;color:#333 }
+::input-placeholder{font-size:12px;color:color:#333} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	font-size: 0.625em;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1;
+}
+
+li{
+	list-style: none;
+}
+
+fieldset{
+	/*border:none;*/
+}
+
+input {
+/*	-webkit-appearance: none;*/
+
+}
+
+
+button {
+	/*-webkit-appearance: none;*/
+	/*border: none;*/
+	background-color: transparent;
+	cursor: pointer
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+/*global_class*/
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	z-index: 99
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.ir_pm {
+	text-indent: -999em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+
+.ir_wa {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: -10;
+	width: 100%;
+	height: 100%
+}
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+
+
+.screen_out {
+	position: absolute;
+	top: -9999em;
+	left:-9999em;
+}
+
+.text_hide {
+	font-size: 0px
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block
+}
+
+
+/*grid*/
+---------------------------
+@charset "utf-8";
+html,
+body {
+  height: 100vmax;
+}
+
+#back{position:fixed;
+  top:0;left:0;
+  width:100%;height:100%; 
+  z-index: -99;
+    }
+
+

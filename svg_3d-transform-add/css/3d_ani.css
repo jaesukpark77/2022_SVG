@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+.rotate_box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 100px;
+  /* border: 1px solid #000; */
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  transition:all 2s ease 0s;
+
+}
+
+.rotate_box>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 2rem;
+  backface-visibility: hidden;
+  opacity: 0.3;
+  transition:all 1s ease 0s;
+}
+
+.rotate_box>div:nth-child(1) {
+  transform: rotateY(0deg) translate3d(0px, 0px, 100px);
+  background: red;
+}
+
+.rotate_box>div:nth-child(2) {
+  transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+  background: #00ff4c;
+}
+
+.rotate_box>div:nth-child(3) {
+  transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+  background: #4a64da;
+}
+
+.rotate_box>div:nth-child(4) {
+  transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+  background: #da4ac7;
+}
+
+.rotate_box div:nth-child(5) {
+  transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+  background: rgb(249, 253, 24);
+}
+
+.rotate_box div:nth-child(6) {
+  transform: rotateX(-90deg) translate3d(0px, 0px, 100px);
+  background: #7e0197;
+}
+
+/* .rotate_box:hover{
+  transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) ;
+} */
+
+.rotate_box.on{
+  transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) ;
+}
+
+.move_box_wrap{
+  position: relative;
+  width:200px;
+  height:200px;
+  border:1px solid #000;
+  background:#7c7a7a
+  /* transform-style: preserve-3d;
+  perspective: 2000px; */
+}
+.move_box {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(254, 255, 253);
+  border-radius: 100%;
+  box-shadow: 10px 10px 1px #000;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.move_box1_wrap{
+  position: relative;
+  width:200px;
+  height:200px;
+  border:1px solid #000;
+  /* background:#7c7a7a */
+  /* transform-style: preserve-3d;
+  perspective: 2000px; */
+}
+.move_box1 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: 80px;
+  border:2px solid #000;
+  box-shadow: -3px -3px 3px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-size: 0;
+}

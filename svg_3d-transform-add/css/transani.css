@@ -1,0 +1,16 @@
+@charset "utf-8";
+.perspec_box1{
+  display: block;
+  width: 200px;
+  height:200px;
+  border:1px solid #000;
+  perspective:400px;
+
+ 
+}
+.svg01{
+  fill-opacity: 0.3;
+  transform: rotateY(45deg);
+  /* transform-style: preserve-3d; */ 
+}
+

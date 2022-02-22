@@ -1,0 +1,91 @@
+@charset "utf-8";
+body{
+  font-size:1.6rem;
+}
+
+/* flipY 예제 */
+.flipy_wrap{
+  position:relative;
+  width:200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin: 60px;
+  border:1px solid #000;
+  transform-style: preserve-3d;
+  perspective: 400px;
+
+}
+.flipy_wrap .front_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: darksalmon;
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+}
+
+.flipy_wrap .back_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #6da37d;
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+  transform: rotateY(-180deg);
+}
+
+.flipy_wrap.on .front_card{
+  transform: rotateY(180deg);
+}
+.flipy_wrap.on .back_card{
+  transform:rotateY(0deg);
+}
+
+
+/* flipX 예제 */
+.flipx_wrap{
+  position:relative;
+  width:200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin: 60px;
+  border:1px solid #000;
+  transform-style: preserve-3d;
+  perspective: 400px;
+}
+
+.flipx_wrap .front_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgb(109, 192, 218);
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+}
+
+.flipx_wrap .back_card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #26525f;
+  backface-visibility: hidden;
+  transition: all 1s ease 0s;
+  transform: rotateX(-180deg);
+}
+
+.flipx_wrap.on .front_card{
+  transform: rotateX(180deg);
+}
+.flipx_wrap.on .back_card{
+  transform:rotateX(0deg);
+}

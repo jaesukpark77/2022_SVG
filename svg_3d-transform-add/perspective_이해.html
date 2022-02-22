@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>perspective</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <link rel="stylesheet" href="css/perspec.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <h1>perspective</h1>
+  <h2>perspective 적용 안함</h2>
+  <div class="perspective_box01">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <h2>perspective 부모 </h2>
+  <div class="perspective_box02">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <h2>perspective 자식 </h2>
+  <div class="perspective_box03">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <h2>perspective & translate</h2>
+  <a href="#translate">click</a>
+  <a href="#reset">reset</a>
+  <div class="perspective_box04">
+    <p id="translate">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <h2>트랜스폼 속성 적용 순서에 따른 효과</h2>
+  <a href="#translate01">click</a>
+  <a href="#reset">reset</a>
+  <div class="perspective_box05">
+    <p id="translate01">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <h2>backface-visibility 예제</h2>
+  <a href="#card_id">click</a>
+  <a href="#reset">reset</a>
+    <a class="card" id="card_id">
+      <div class="face_front">front</div>
+      <div class="face_back">back</div>
+    </a>
+
+  <h2> box contents flip 예제</h2>
+  <a href="#">click</a>
+  <a href="#reset">reset</a>
+    <div class="flip_wrap" id="flip_wrap_id">
+      <div class="front_card">front</div>
+      <div class="back_card">back</div>
+    </div>
+
+    <h2>image contents flip 예제</h2>
+      <div class="flip_wrap" id="flip_wrap_id">
+        <div class="front_card">
+          <img src="images/blue_mon.png" alt="blue_mon" />
+        </div>
+        <div class="back_card">
+          <img src="images/red_mon.png" alt="red_mon" />
+        </div>
+      </div>
+
+      <script>
+        $(function(){
+          $('.flip_wrap').mouseenter(function(){
+            $(this).addClass('on')
+          }
+          )//en
+
+          $('.flip_wrap').mouseleave(function(){
+            $(this).removeClass('on')
+          }
+          )//en
+        })
+      </script>
+</body>
+</html>
