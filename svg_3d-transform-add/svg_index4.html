@@ -69,5 +69,125 @@
             transform-origin:0px 0px;
         }
     </style>
+
+    <div class="tran_box hover01">
+        <img src="images/03-screenshot.png" alt="img03">
+    </div>
+    <style>
+        .tran_box{
+            width:300px;
+            height:300px;
+            border:1px solid #000;
+            margin:20px;
+            overflow:hidden;
+        }
+
+        .hover01>img{
+            width:100%;
+            height:100%;
+            transition:all 1s ease 0s;
+        }
+
+        .hover01:hover img{
+            transform: scale(1.8);
+        }
+    </style>
+
+    <div class="tran_box hover02">
+        <img src="images/slider_img_2.jpg" alt=slider"">
+    </div>
+    <style>
+        .hover02>img{
+            transition:all 1s ease 0s;
+        }
+
+        .hover02:hover img{
+            transform: translateX(-200px);
+        }
+    </style>
+
+    <div class="tran_box hover03">
+        <img src="images/vertical.png" alt="vertical">
+    </div>
+    <style>
+        .hover03>img{
+            transition:all 1s ease 0s;
+        }
+
+        .hover03:hover img{
+            transform: translateY(-300px);
+        }
+    </style>
+    <h2>circle</h2>
+    <div class="tran_box rotate">
+        <img src="images/index_tit01_box1.png" alt="tit01">
+        <div class="line">
+            <img src="images/index_tit01_line.png" alt="line">
+        </div>
+    </div>
+    <style>
+        .rotate{
+            position:relative;
+        }
+        .rotate>img{
+            width:100%;
+            height:100%;
+            transition:all 1s ease 0s;
+        }
+        .line{
+            position:absolute;
+            top:90px;
+            left:0px;
+            width:100%;
+            height:70px;
+            border:1px solid #000;
+            opacity:0;
+            transition:all 1s ease 0.5s;
+        }
+
+        .rotate:hover>img{
+            transform:rotate(45deg);
+        }
+
+        .rotate:hover .line{
+            opacity:1;
+        }
+    </style>
+
+    <div class="tran_box hover04">
+        <img src="images/07-screenshot.png" alt="01">
+        <div class="down"></div>
+        <p>text</p>
+    </div>
+    <style>
+        .hover04{
+            position:relative;
+            /*overflow:visible;*/
+        }
+        .down{
+            position:absolute;
+            top:-300px;
+            left:0;
+            width:300px;
+            height:300px;
+            background:rgba(0,0,0,.6);
+            transition:all 1s ease 0s;
+        }
+        .hover04 p{
+            position: absolute;
+            top:-200px;
+            left:50%;
+            transform:translateX(-50%);
+            font-size:3rem;
+            color:#fff;
+            transition:all 1s ease 0.5s;
+        }
+        .hover04:hover .down{
+            transform:translateY(300px);
+        }
+        .hover04:hover p{
+            transform:translateX(-50%) translateY(300px);
+        }
+    </style>
 </body>
 </html> 
