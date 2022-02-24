@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>SVG-Transform</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+  <style type="text/css">
+    svg {
+      border: 1px solid #000;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <pre>
+    animateTransform 
+    attributeName="transform" 
+    attributeType="XML"  
+    type="scale"
+    begin="시간" , end="시간"
+    dur = "clock 시간 | indefinite | media"
+    restart = "always | never"
+    repeatCount = "횟수|indefinite"
+    repeatDur = "시간"
+    fill = "freeze | remove" : 애니메이션 완료 후 속성값의 지속적인 존재여부
+    from = "초기값"
+    to = "종료값"
+    by = "변화량"
+    values="70; 150; 100; 300; 290; 400"
+    calcMode = "spline" (discrete | linear | paced | spline)
+    keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+    keySplines
+  </pre>
+  <h1>SVG-animateTransform</h1>
+  <h2>animateTransform</h2>
+ <svg width="300px" height="200px">
+  <style>
+    circle{
+      fill:blueviolet;
+      stroke:#333;
+      stroke-width: 3px;
+      stroke-dasharray:1px 4px;
+      stroke-linecap: round;
+    }
+  </style>
+  <circle cx="40" cy="40" r="25"> 
+    <animateTransform 
+    attributeName="transform" 
+    attributeType="XML"
+    type="scale"
+    from="0"
+    to="2"
+    dur="1s"
+    begin="click"
+    repeatCount="1"
+    fill="freeze"
+    >
+    </animateTransform>
+  </circle>
+ </svg>
+
+ <h2>crimson-circle-values</h2>
+ <svg class="box2" width="300px" height="100px" >
+   <style>
+   .box2 circle{
+      fill:crimson;
+    }
+   </style>
+ <circle cx="50" cy="50" r="25">
+   <animate 
+   attributeName="cx" 
+   values="30;270;30"
+   dur="1s"
+   begin="click"
+   repeatCount="1"
+   fill="freeze"
+   >
+   </animate>
+ </circle>
+</svg>
+
+<h2>yellow-circle-circ-anim.begin + 1s</h2>   
+  <svg class="box3" width="400px" height="500px">
+    <style>
+      .box3 circle{
+        fill:gold;
+      }
+    </style>
+    <g id="yellow_circle">
+    <circle cx="250" cy="100" r="25">
+         <animateTransform 
+          attributeName="transform" 
+          attributeType="XML"  
+          type="scale"
+          from="1"
+          to="1.3"
+          dur="1s"
+          begin="yellow_circle.click"
+          repeatCount="1"
+          additive="sum"
+          fill="freeze"
+          >
+          </animateTransform>
+          <animateTransform 
+          attributeName="transform" 
+          attributeType="XML"  
+          type="rotate"
+          from="0"
+          to="45"
+          dur="1s"
+          begin="yellow_circle.click"
+          additive="sum"
+          repeatCount="1"
+          fill="freeze"
+          >
+          </animateTransform>
+    </circle>
+    </g>
+  </svg>
+</svg>
+</body>
+</html>

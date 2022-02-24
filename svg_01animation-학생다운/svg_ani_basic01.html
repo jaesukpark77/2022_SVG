@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>SVG-ANI01</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+  <style type="text/css">
+    svg {
+      border: 1px solid #000;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <pre>
+    attributeName="cx"
+    begin="시간" , end="시간"
+    dur = "clock 시간 | indefinite | media"
+    restart = "always | never"
+    repeatCount = "횟수|indefinite"
+    repeatDur = "시간"
+    fill = "freeze | remove" : 애니메이션 완료 후 속성값의 지속적인 존재여부
+    from = "초기값"
+    to = "종료값"
+    by = "변화량"
+    values="70; 150; 100; 300; 290; 400"
+    calcMode = "spline" (discrete | linear | paced | spline)
+    keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+    keySplines
+  </pre>
+  <h1>SVG-ANI01</h1>
+  <h2>basic-cx</h2>
+ <svg width="300px" height="100px">
+  <style>
+    circle{
+      fill:blueviolet;
+      stroke:#333;
+      stroke-width: 3px;
+      stroke-dasharray:1px 4px;
+      stroke-linecap: round;
+    }
+  </style>
+  <circle cx="25" cy="25" r="25"> 
+    <animate 
+    attributeName="cx" 
+    from="0"
+    to="275"
+    dur="1s"
+    begin="click"
+    repeatCount="1"
+    fill="freeze"
+    >
+    </animate>
+  </circle>
+ </svg>
+
+ <h2>crimson-circle-values</h2>
+ <svg class="box2" width="300px" height="100px" >
+   <style>
+   .box2 circle{
+      fill:crimson;
+    }
+   </style>
+ <circle cx="50" cy="50" r="25">
+   <animate 
+   attributeName="cx" 
+   values="30;270;30"
+   dur="1s"
+   begin="click"
+   repeatCount="1"
+   fill="freeze"
+   >
+   </animate>
+ </circle>
+</svg>
+
+<h2>yellow-circle-circ-anim.begin + 1s</h2>   
+  <svg class="box3" width="300px" height="150px">
+    <style>
+      .box3 circle{
+        fill:gold;
+      }
+    </style>
+    <circle cx="25" cy="25" r="25">
+         <animate 
+          attributeName="cx" 
+          from="50"
+          to="250"
+          dur="1s"
+          begin="click"
+          repeatCount="1"
+          fill="freeze"
+          id="yellow_ani"
+          >
+          </animate>
+    </circle>
+    <rect x="20" y="80" width="50px" height="50px" rx="0" xy="0"> 
+       <animate 
+         attributeName="x" 
+         from="50"
+         to="250"
+         dur="1s"
+         begin="yellow_ani.begin+1s"
+         repeatCount="1"
+         fill="freeze"
+         >
+         </animate>
+         <animate 
+         attributeName="rx" 
+         from="0"
+         to="40"
+         dur="1s"
+         begin="yellow_ani.begin+1s"
+         repeatCount="1"
+         fill="freeze"
+         >
+         </animate>         
+    </rect>
+  </svg>
+
+<h2>end=greenani.begin/green_ani-click</h2>
+<p>greenAni가 시작하면 종료됨 </p>
+<svg class="box4" width="300px" height="150px">
+  <style>
+    .box4 circle{
+      fill:#e100ff;
+    }
+    .box4 rect{
+      fill:green;
+    }
+  </style>
+  <circle cx="25" cy="25" r="25" fill="#e100ff">
+       <animate 
+        attributeName="cx" 
+        from="50"
+        to="250"
+        end="green_ani.begin"
+        dur="2s"
+        begin="0s"
+        repeatCount="1"
+        fill="freeze"
+        id="pink_ani"
+        >
+        </animate>
+  </circle>
+  <rect x="20" y="80" width="50px" height="50px" rx="0" xy="0"> 
+     <animate 
+       attributeName="x" 
+       from="50"
+       to="250"
+       dur="1s"
+       begin="click"
+       repeatCount="1"
+       fill="freeze"
+       id="green_ani"
+       >
+       </animate>
+       <animate 
+       attributeName="rx" 
+       from="0"
+       to="40"
+       dur="1s"
+       begin="click"
+       repeatCount="1"
+       fill="freeze"
+       >
+      </animate>        
+  </rect>
+</svg>
+
+<h2>keyTimes/0~1</h2>
+<svg width="300" height="200">
+  <rect x="50" y="50" width="50" height="50">
+  <animate 
+    attributeName="x" 
+    values="60 ; 110 ; 60 ; 10 ; 60"
+    dur="1s"
+    begin="click"
+    repeatCount="1"
+    keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
+    fill="freeze"
+    >
+   </animate>
+  </rect>
+</svg>
+
+<h2>keySplines</h2>
+<p>calcMode="spline" 반드시 지정 되어 있어야 한다</p>
+<h2><a href="https://cubic-bezier.com/#.17,.67,.83,.67">cubic bezier</a></h2> 
+<svg width="300" height="350">
+  <circle r="30" cx="50" cy="50" fill="pink" >
+  <animate 
+    attributeName="cy"
+    from="50"
+    to="250" 
+    dur="3s"
+    begin="click"
+    calcMode="spline"
+    values="50; 250; 120; 250; 170; 250; 210; 250"
+    keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+    keySplines="0.42 0 1 1;
+                0 0 0.59 1;
+                0.42 0 1 1;
+                0 0 0.59 1;
+                0.42 0 1 1;
+                0 0 0.59 1;
+                0.42 0 1 1"
+           fill="freeze"  
+           />
+  </circle>
+</svg>
+</body>
+</html>

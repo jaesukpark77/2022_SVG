@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>SVG-animateMotion</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+  <style type="text/css">
+    svg {
+      border: 1px solid #000;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <svg id="back" width="100%" height="100%">
+    <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)" />
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  <pre>
+    animateMotion
+    path="M100,250 C 100,50 400,50 400,250"
+    rotate="auto" 각도 | auto | auto-reverse
+    dur = "clock 시간 | indefinite | media"
+    repeatCount = "횟수|indefinite"
+    fill = "freeze | remove" : 애니메이션 완료 후 속성값의 지속적인 존재여부
+    calcMode = "spline" (discrete | linear | paced | spline)
+    keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+    keySplines=".5 0 .5 1"
+  </pre>
+  <h1>SVG-animateMotion</h1>
+  <h2>SVG-animateMotion</h2>
+ <svg class="box1" width="600px" height="400px" viewbox="-50 -100 600 400">
+   <style>
+   .line{
+       fill:none;
+       stroke:#000;
+     }
+   .ani01{ 
+      fill:green;
+      stroke:#000;
+    }
+   </style>
+       <path id="text-line" d="M100,250 C 100,50 400,50 400,250"/>
+       <text>
+        <textPath xlink:href="#text-line" startOffset="5%">
+          SVG text can use the textPath element and 
+          path data to draw text that flows along the path.
+          <animate attributeName="startOffset" values="5%;70%;100%" dur="3s" repeatCount="indefinite"  />
+      </textPath>
+
+      <!-- <animateMotion dur="6s" repeatCount="indefinite"
+      path="M100,250 C 100,50 400,50 400,250" />
+    </path> -->
+    </text>
+ </svg>
+
+ <svg class="box1" width="600px" height="400px" viewbox="-50 -100 600 400">
+      <path id="text-line" d="M100,250 C 100,50 400,50 400,250"/>
+      <d></d>
+
+     <!-- <animateMotion dur="6s" repeatCount="indefinite"
+     path="M100,250 C 100,50 400,50 400,250" />
+   </path> -->
+   </text>
+</svg>
+</body>
+</html>

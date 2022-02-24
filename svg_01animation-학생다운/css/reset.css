@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+ font-family:nbgR;
+ src:url(fonts/NanumBarunGothic.eot?#iefix) format("embedded-opentype");
+ src:url(fonts/NanumBarunGothic.woff) format("woff");
+}*/
+
+/*reset*/
+/*scroll-bar 없애기*/
+/*html,body{width:100%;height:100%;-ms-overflow-style: none; }
+body::-webkit-scrollbar {display: none;}*/
+
+/* placeholder 지정할것 */
+/* ::-webkit-input-placeholder{font-size:12px;color:#333}
+::-moz-input-placeholder{ font-size:12px;color:#333 }
+::input-placeholder{font-size:12px;color:color:#333} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	font-size: 0.625em;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1;
+}
+
+li{
+	list-style: none;
+}
+
+fieldset{
+	/*border:none;*/
+}
+
+input {
+/*	-webkit-appearance: none;*/
+
+}
+
+
+button {
+	/*-webkit-appearance: none;*/
+	/*border: none;*/
+	background-color: transparent;
+	cursor: pointer
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+/*global_class*/
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	z-index: 99
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.ir_pm {
+	text-indent: -999em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+
+.ir_wa {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: -10;
+	width: 100%;
+	height: 100%
+}
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+
+
+.screen_out {
+	position: absolute;
+	top: -9999em;
+	left:-9999em;
+}
+
+.text_hide {
+	font-size: 0px
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block
+}
