@@ -27,8 +27,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
 	</script>
 </head>
-
-<body>
     <svg id="back" width="100%" height="100%">
         <defs>
           <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -174,9 +172,122 @@
         </rect>
     </svg>
     <svg width="300" height="200">
-        <circle>
-            
+        <circle cx="25" cy="25" r="25">
+            <animate
+                attributeName="cx"
+                dur="2s"
+                values="25;270;25"
+                begin="click"
+                repeatCount="indefinite"
+                fill="freeze"
+            >
+            </animate>
         </circle>
+    </svg>
+    <svg width="200" height="200">
+        <circle cx="60" cy="60" r="20" style="visibility:visible;">
+            <set
+                attributeName="visibility"
+                dur="3s"
+                to="hidden"
+                begin="click"
+            >
+            </set>
+        </circle>
+    </svg>
+
+    <svg width="300" height="200">
+        <circle cx="60" cy="60" r="40" fill="pink">
+            <animate
+                attributeName="r"
+                dur="2s"
+                values="40;20;40"
+                begin="click"
+                fill="freeze"
+                id="pink"
+            >
+            </animate>
+        </circle>
+        <text x="20" y="60" style="font-size:2rem;visibility:hidden">
+            all gone?
+            <set
+                attributeName="visibility"
+                dur="1s"
+                to="visible"
+                begin="pink.begin+2.5s"
+                fill="remove"
+            >
+            </set>
+        </text>
+    </svg>
+    <svg width="300" height="200">
+        <g id="rect_all">
+            <rect x="120" y="80" width="40" height="40" style="transform-origin:center;">
+                <animateTransform
+                    attributeName="transform"
+                    type="scale"
+                    dur="3s"
+                    values="1;0.5;2;1"
+                    begin="click"
+                    additive="sum"
+                    >
+                </animateTransform>
+                <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    dur="3s"
+                    values="45;90;-45;45"
+                    begin="click"
+                    additive="sum"
+                >
+                </animateTransform>
+            </rect>
+        </g>
+        <use xlink:href="#rect_all" x="50"></use>
+    </svg>
+    <svg wid="300" height="300">
+        <rect x="60" y="60" width="20" height="20">
+            <animateTransform
+                attributeName="transform"
+                type="scale"
+                values="1;2;1;"
+                dur="2s"
+                additive="sum"
+            >
+            </animateTransform>
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="60,60;60,120;60,60"
+                dur="2s"
+                additive="sum"
+            >
+            </animateTransform>
+        </rect>
+    </svg>
+    <svg width="500" height="500">
+        <!-- <path class="line" d="M100,250 C 100,50 400,50 400,250" style="fill:none;stroke:#000;stroke-width:3px"/> -->
+        <circle cx="15" cy="5" r="10">
+            <animateMotion
+                path="M100,250 C 100,50 400,50 400,250"
+                dur="5s"
+                repeatCount="indefinite"
+                rotate="auto"
+            >
+            </animateMotion>
+        </circle>
+    </svg>
+    <svg width="500" height="500">
+        <path class="line" d="M100,250 C 100,50 400,50 400,250" style="fill:none;stroke:#000;stroke-width:3px"/>
+        <rect x="15" y="-10" width="20" height="20">
+            <animateMotion
+                path="M100,250 C 100,50 400,50 400,250"
+                dur="5s"
+                repeatCount="indefinite"
+                rotate="auto"
+            >
+            </animateMotion>
+        </rect>
     </svg>
 </body>
 </html> 
