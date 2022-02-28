@@ -124,7 +124,7 @@
                 >
                 </animate>
             </use>
-            <use xlink:href="#rect_ani" x="40" y=80">
+            <use xlink:href="#rect_ani" x="40" y="80">
                 <animate 
                     attributeName="y"
                     dur="2s"
@@ -133,7 +133,7 @@
                 >
                 </animate>
             </use>
-            <use xlink:href="#rect_ani" x="80" y=0">
+            <use xlink:href="#rect_ani" x="80" y="0">
                 <animate 
                     attributeName="y"
                     dur="2s"
@@ -142,7 +142,7 @@
                 >
                 </animate>
             </use>
-            <use xlink:href="#rect_ani" x="120" y=80">
+            <use xlink:href="#rect_ani" x="120" y="80">
                 <animate 
                     attributeName="y"
                     dur="2s"
@@ -151,6 +151,74 @@
                 >
                 </animate>
             </use>
+        </svg>
+        <svg width="300" height="300">
+            <defs>
+                <path class="circle01" d="M120,40     C148,40 180,62 180,100    S148,160 120,160    S60,140 60,100    S92,40 120,40    Z" style="fill:none;stroke:#000;stroke-width:5px;"></path>
+            </defs>
+                <path classs="rect01" d="M110,20     C110,20 110,180 110,180    S20,180 20,180    S20,20 20,20    S110,20 110,20 Z" style="fill:none;stroke:#000;stroke-width:5px;">
+                    <animate
+                        attributeName="d"
+                        dur="6s"
+                        values="M110,20     C110,20 110,180 110,180    S20,180 20,180    S20,20 20,20    S110,20 110,20 Z;M120,40     C148,40 180,62 180,100    S148,160 120,160    S60,140 60,100    S92,40 120,40    Z;M110,20     C110,20 110,180 110,180    S20,180 20,180    S20,20 20,20    S110,20 110,20 Z"
+                        repeatCount="1"
+                        fill="freeze"
+                    >
+                    </animate>
+                </path>
+        </svg>
+        <svg width="200" height="200">
+            <defs>
+                <path class="heart" d="M 106 51 C 121 41 135 24 172 37 C 184 47 194 59 179 93 C 175 106 172 109 163 121 C 152 135 157 131 140 148 C 124 162 114.6667 165.3333 105 170 C 94 168 83 161 70 148 C 55 132 49 127 42 116 C 32 93 29 97 23 70 C 23 31 52 37 57 35 C 71 33 87.6667 42 106 51 Z" style="fill:none; stroke:#000;stroke-width: 5px;">
+                </path>
+            </defs>
+            <path class="star" d="M 106 51 C 122 42 138 33 154 24 C 151 43 148 62 145 81 C 158.6667 94 172.3333 107 186 120 C 168 123.3333 150 126.6667 132 130 C 123.3333 147.6667 114.6667 165.3333 106 183 C 97 166 88 149 79 132 C 60 129 41 126 22 123 C 35.3333 109.6667 48.6667 96.3333 62 83 C 58.3333 63.3333 54.6667 43.6667 51 24 C 69.3333 33 87.6667 42 106 51 Z"
+            style="fill:none; stroke:#000;stroke-width: 5px;">
+                <animate
+                attributeName="d"
+                dur="4s"
+                values="M 106 51 C 122 42 138 33 154 24 C 151 43 148 62 145 81 C 158.6667 94 172.3333 107 186 120 
+                C 168 123.3333 150 126.6667 132 130 C 123.3333 147.6667 114.6667 165.3333 106 183 C 97 166 88 149 79 132 
+                C 60 129 41 126 22 123 C 35.3333 109.6667 48.6667 96.3333 62 83 C 58.3333 63.3333 54.6667 43.6667 51 24 C 69.3333 33 87.6667 
+                42 106 51 Z;M 106 51 C 121 41 135 24 172 37 C 184 47 194 59 179 93 C 175 106 172 109 163 121 C 152 135 157 131 140 148 C 124 
+                162 114.6667 165.3333 105 170 C 94 168 83 161 70 148 C 55 132 49 127 42 116 C 32 93 29 97 23 70 C 23 31 52 37 57 35 C 71 33 
+                87.6667 42 106 51 Z;M 106 51 C 122 42 138 33 154 24 C 151 43 148 62 145 81 C 158.6667 94 172.3333 107 186 120 C 168 123.3333
+                150 126.6667 132 130 C 123.3333 147.6667 114.6667 165.3333 106 183 C 97 166 88 149 79 132 C 60 129 41 126 22 123 C 35.3333
+                109.6667 48.6667 96.3333 62 83 C 58.3333 63.3333 54.6667 43.6667 51 24 C 69.3333 33 87.6667 42 106 51 Z;"
+                repeatCount="1"
+                fill="freeze"
+                >
+                </animate>
+        </path>
+        </svg>
+        <svg width="500" height="400">
+            <defs>
+                <path id="text01" d="M100,250 C 100,50 400,50 400,250"></path>
+            </defs>
+            <text>
+                <textPath xlink:href="#text01" startOffset="3%">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, perferendis fugit delectus, aspernatur ab ut eaque reiciendis illum aut quidem itaque voluptas esse rem saepe deleniti hic cum impedit incidunt.
+                    <animate
+                        attributeName="startOffset"
+                        dur="3s"
+                        values="3%;60%;100%"
+                        repeatCount="1"
+                        fill="freeze"
+                    >
+                    </animate>
+                </textPath>
+            </text>
+        </svg>
+        <svg width="500" height="400">
+            <path id="text02" d="M100,250 C 100,50 400,50 400,250"></path>
+            <rect x="10" y="-12" width="30" height="30" fill="gold">
+                <animateMotion
+                    dur="5s"
+                    path="M100,250 C 100,50 400,50 400,250"
+                    rotate="auto"
+                >
+                </animateMotion>
+            </rect>
         </svg>
 </body>
 </html> 
