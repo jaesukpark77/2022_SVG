@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-ex</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+	<h1>ex</h1>
+	<h2>mask-ani01</h2>
+	<svg class="rect-ani-svg" width="500" height="400" style="border:2px solid #000;cursor:pointer;background:rgb(255, 166, 0)" >
+		<mask id="mask-rect-all">
+		<g id="rect-all" style="transform-origin:20% 40%" >
+			<g id="rect2">
+				<rect x="10" y="10" width="100" height="100"></rect>
+				<rect x="10" y="140" width="100" height="100"></rect>
+			</g>
+			<use xlink:href="#rect2" x="90" y="90"></use>
+			<animateTransform 
+				attributeName="transform"
+				type="rotate"
+				values="0;360;0"
+				additive="sum"
+				dur="4s"
+				repeatCount="1"
+				fill="freeze"
+				begin="sss.click"
+			>
+			</animateTransform>
+			<animateTransform 
+			attributeName="transform"
+			type="scale"
+			values="1;4;1"
+			additive="sum"
+			dur="4s"
+			repeatCount="1"
+			fill="freeze"
+			begin="sss.click"
+		> 
+		</animateTransform>
+		<animateTransform 
+		attributeName="transform"
+		type="translate"
+		values="0 0;-300 -300;0 0;"
+		additive="sum"
+		dur="4s"
+		repeatCount="1"
+		fill="freeze"
+		begin="sss.click"
+	  >
+	 </animateTransform>		
+		</g>
+ 	</mask>
+		<image id="sss" mask="url(#mask-rect-all)"
+		xlink:href="images_f/dounat-3665638_1920.jpg"
+	  width="600"
+		x="-40"
+		>
+		</image>
+	</svg>
+	<style>
+		.rect-ani-svg rect {
+			transform-origin: 20% 70%;
+			transform: rotate(45deg);
+			fill:#fff;
+		}
+   /* #rect-all{
+		 transform: translate(-300px,-300px);
+		 transition: all 1s ease 0s;
+	 } */
+
+	 /* .rect-ani-svg:hover #rect-all{
+		transform: translate(0px,0px) rotate(360deg) scale(2);
+	 } */
+
+	</style>
+		<h2>mask-ani02</h2>
+		<svg width="500" height="300" style="background:#000">
+			<mask id="mask-grdi">
+				<linearGradient id="gradi-01" x1=0" y1="0" x2="1" y2="1"">
+					<stop style="stop-color:#000">
+						<animate
+						attributeName="offset"
+						values="1;0.8;0.6;0.4;0.2;0;0.2;0.4;0.6;0.8;1"
+						dur="4s"
+						repeatCount="indefinite"
+					>
+					</animate>
+					</stop>
+					<stop offset="1" style="stop-color:#fff">
+					<animate
+						attributeName="offset"
+						dur="4s"
+						repeatCount="indefinite"
+					>
+					</animate>
+			 		</stop>
+				</linearGradient>
+				<rect  x="0" y="0" width="500" height="300" fill="url(#gradi-01)" >
+				</rect>
+			</mask>
+
+		<image 
+		mask="url(#mask-grdi)"
+		xlink:href="images_f/new-york01.jpg"
+	  width="600"
+		>
+		</image>
+	 </svg>
+</body>
+</html>

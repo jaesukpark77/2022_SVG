@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.view01 rect{
+  fill:coral;
+  opacity: 1;
+}
+
+.view02 rect{
+  fill:#4aaabb;
+  opacity: 1;
+  stroke:#ff4fca;
+  stroke-width:4px;
+}
+
+.view03 rect{
+  fill:#fff019;
+  opacity: 1;
+  stroke:#ff4fca;
+  stroke-width:4px;
+}
+
+.view04 rect{
+  fill:#19ff80;
+  opacity: 1;
+  stroke:#ff4fca;
+  stroke-width:4px;
+}

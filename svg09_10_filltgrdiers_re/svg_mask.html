@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-image</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+	<style type="text/css">
+		svg {
+			border: 1px solid #000
+		}
+	</style>
+</head>
+
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+	<h1>svg image</h1>
+	<h2>svg image</h2>
+	<pre style="display: none;">
+			x 또는 y 속성을 설정하지 않으면 0이 됩니다.
+			width or height 한쪽만 써야 비율이 유지 된다
+			height 또는 width 속성을 설정하지 않으면, 0이 됩니다.
+			height 또는 width 속성이 0이면 이미지는 표시되지 않습니다.
+		</pre>
+	<svg class="img01_svg" width="300px" height="300px" viewBox="0 0 300 300">
+		<style type="text/css">
+			.img01_svg {
+				background: #ccc;
+			}
+		</style>
+		<image xlink:href="images_f/fruits01.jpg" x="0" y="0" height="300" aria-label="fruit">
+		</image>
+	</svg>
+
+	<h2>svg image-mask</h2>
+	<svg width="300" height="300">
+		<defs>
+			<mask id="photo">
+				<polygon fill="pink" points="146,21 239,58 203,149 106,147 65,65 146,21">
+				</polygon>
+			</mask>
+		</defs>
+		<image mask="url(#photo)" xlink:href="images_f/fruits01.jpg" x="0" y="0" width="500" height="300">
+		</image>
+	</svg>
+	<h2>linearGradient</h2>
+	<pre>
+		linearGradient-attribute
+		id
+		x1 and y1 (starting point)
+		x2 and y2 (end point)  
+    spreadMethod-values: pad, repeat, and reflect
+		  (stop)element 로 알수 있음 
+		  offset/stop-color/stop-opacity
+		gradientTransform	
+		gradientUnits
+		xlink:href
+	</pre>
+	<svg>
+		<defs>
+			<linearGradient id="blg" x1="0" y1="0" x2="1" y2="1">
+				<stop offset="0%" stop-color="#00a2ff" />
+				<stop offset="100%" stop-color="#004d80" />
+			</linearGradient>
+		</defs>
+		<rect fill="url(#blg)" x="0" y="0" width="100" height="100" />
+	</svg>
+	<svg>
+		<defs>
+	  <linearGradient id="line-g" x1="0" y1="0" x2="1" y2="1" style="transform:  rotate(45deg);">
+       <stop offset="0%" style="stop-color: blueviolet;stop-opacity:1.00"></stop> 
+			 <stop offset="40%" style="stop-color:#599957; stop-opacity:1.00"></stop>
+			 <stop offset="100%" stop-color="#ffff00"></stop> 
+		</linearGradient>
+	</defs>
+	<rect fill="url(#line-g)" x="0" y="0" width="100" height="100">
+	</rect>
+	</svg>
+	<h2>radialGradient</h2>
+	<pre>
+		radialGradient
+		cx, cy-	방사형 그래디언트 중심의 x 및 y입니다
+		fx, fy-방사형 그래디언트 초점의 x 및 y입니다.
+	</pre>
+	<svg>
+		<defs>
+			<radialGradient id="radial-g" cx="50%" cy="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(217, 248, 44)"></stop>
+				<stop offset="100%" style="stop-color:#a05f95"></stop>
+			</radialGradient>
+		</defs>
+		<rect fill="url(#radial-g)" x="0" y="0" width="100" height="100">
+	</svg>
+
+ <h2>Gradient-mask-image</h2>
+	<pre>
+		마스크(mask)와 클립패스(clipPath)의 차이점
+		마스킹은 마스크의 투명도 및 회색 값을 고려하여 부드러운 가장자리를 허용합니다. 반면에 클리핑은 다른 파트에서 정의한 요소의 일부를 제거하는 것을 말합니다. 이 경우 모든 반투명 효과는 가능하지 않습니다.
+	</pre>
+   <svg width="300" height="300">
+		<defs>
+			<radialGradient id="mask-gradi" cx="30%" cy="50%" r="60%"  >
+				<stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1.00" />
+				<stop offset="96%" style="stop-color:rgb(0,0,0);stop-opacity:1.00" />
+			</radialGradient>
+			<mask id="mask-g-poly">
+				<polygon fill="url(#mask-gradi)" points="146,21 239,58 203,149 106,147 65,65 146,21">
+				</polygon>
+			</mask>
+		</defs>
+		<image 
+		mask="url(#mask-g-poly)"
+		width="200"
+		height="200"
+		xlink:href="images_f/fruits01.jpg"
+		aria-label="fruit">
+		</image>
+	 </svg>
+	 <h2>mask-text</h2>
+	 <pre>
+		이미지는 알파 채널로 사용 되었기에 흑백으로 표현됩니다.
+	 </pre>
+	 <svg width="300" height="300">
+		<defs>
+			<mask id="img_mask">
+				<image
+				xlink:href="images_f/fruits01.jpg"
+				aria-label="fruit"
+				>
+				</image>
+			</mask>
+		</defs>
+		<text 
+		mask="url(#img_mask)"
+		x="50" y="100"
+		style="font-weight: bold;
+		font-size:5rem; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+		>
+		AOA 2021
+		</text>
+	 </svg>
+</body>
+</html>

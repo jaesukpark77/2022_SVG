@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-textmask01-1</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+	<style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Oswald:300,700");
+  body{
+    background: #000;
+  }
+	svg {
+     box-shadow: 0px 30px 10px rgba(0,0,0,0.7);
+		}
+.header_box{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  z-index: -10;
+}
+.header_box>img{
+  width: 100%;height:100%;
+}
+section{
+  width:100%;
+  height:800px;
+  /* background: linear-gradient(165deg, #1f005c, #7d0061, #bc365d, #e6745c, #ffb56b); */
+}
+	</style>
+</head>
+
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+  <div class="header_box">
+    <img src="images_f/new-york01.jpg" alt="grey_neckties">
+  </div>
+  <svg width="100%" height="1500px">
+    <defs>
+      <linearGradient id="back_grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1f005c" />
+        <stop offset="0.14285714285714285" stop-color="#5b0060" />
+        <stop offset="0.2857142857142857" stop-color="#870160" />
+        <stop offset="0.42857142857142855" stop-color="#ac255e" />
+        <stop offset="0.5714285714285714" stop-color="#ca485c" />
+        <stop offset="0.7142857142857142" stop-color="#e16b5c" />
+        <stop offset="0.8571428571428571" stop-color="#f39060" />
+        <stop offset="1" stop-color="#ffb56b" />
+      </linearGradient>
+      <radialGradient id="mask-radial" cx="30%" cy="50%" r="60%"  >
+				<stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1.00" />
+				<stop offset="90%" style="stop-color:rgb(0,0,0);stop-opacity:1.00" />
+			</radialGradient>
+      <mask id="mask_text">
+        <rect x="0" y="0" width="100%" height="100%" fill="pink"></rect>
+        <text x="10%" y="25%" style="font-size:10em;font-weight:bold">Introducing</text>
+        <text x="10%" y="40%" style="font-size:20em;letter-spacing:10px;font-weight:bold">SVG MASK</text>
+        <text x="10%" y="50%" style="font-size:5em;letter-spacing:10px;font-weight:bold">
+          <tspan x="10%" y="55%">Lorem ipsum dolor, sit amet consectetur</tspan> 
+          <tspan x="10%" y="60%">Blanditiis illo, deleniti in at, impedit </tspan>
+          <tspan x="10%" y="65%">totam distinctio consequatur dicta, dolorem </tspan> 
+        </text>
+      </mask>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" 
+    fill="url(#mask-radial) url(#back_grad)" 
+    mask="url(#mask_text)"></rect>
+  </svg>
+  <section>
+    <h2 class="screen_out">section</h2>
+  </section>
+</body>
+</html>

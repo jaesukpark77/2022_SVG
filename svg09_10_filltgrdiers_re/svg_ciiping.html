@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg clipPath</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+	<style type="text/css">
+		svg {
+			border: 1px solid #000
+		}
+	</style>
+</head>
+
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5" />
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)" />
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1" />
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#grid)" />
+	</svg>
+	<h1>svg clipPath</h1>
+	<h2>svg clipPath</h2>
+  <svg width="512" height="400" viewBox=" 0 0 512 400">
+    <clipPath id="clippath">
+      <circle cx="150" cy="150" r="150" />  
+    </clipPath>
+
+    <text clip-path="url(#clippath)" font-size="100" font-family="Arial" font-weight="bold" x="0" y="250">
+      AOA 2021
+    </text>
+    <text  font-size="100" font-family="Arial" font-weight="bold" x="0" y="250"
+   opacity="0.3">
+      AOA 2021
+    </text>
+  </svg>
+  <h2>svg clipPath-css</h2>
+  <svg width="512" height="400" viewBox=" 0 0 512 400">
+    <style type="text/css">
+      text{
+        font-size:100px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif; 
+      }
+      .clip-path {
+       clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+     }
+     </style>
+    <clipPath id="clippath">
+      <circle cx="150" cy="150" r="150" />  
+    </clipPath>
+    <text x="0" y="250" class="clip-path">
+      AOA 2021
+    </text>
+  </svg>
+  <h2>svg mask-animation-01</h2>
+  <svg width="300" height="100" style="background: pink;">
+    <defs>
+			<mask id="pink_mask">
+				<polygon fill="pink" points="146,21 239,58 203,149 106,147 65,65 146,21">
+				</polygon>
+			</mask>
+		</defs>
+    <circle id="black-circle" r="30" cx="30" cy="50" mask="url(#pink_mask)"/>
+    <animate xlink:href="#black-circle" 
+    attributeName="cx" 
+    values="30;270;30" 
+    dur="3s" 
+    begin="0s" 
+    repeatCount="indefinite"
+    fill="freeze" />
+  </svg>
+
+  <h2>svg mask-animation-02</h2>
+<svg width="300" height="300" >
+  <defs>
+    <circle cx="60" cy="130" r="60" fill="yellow" id="yellow"></circle> 
+    <mask id="yellow_circle">
+     <use xlink:href="#yellow" class="move"> 
+      <style type="text/css">
+        .move {
+                  animation: move 5s linear  infinite;
+        }
+            
+        @keyframes move {
+          25% {
+            transform: translate(200px, 0px);
+          }
+          75% {
+            transform: translate(0px, 0px);
+          }
+        }
+      </style>
+      </use>  
+  </mask>
+ </defs>
+  <use xlink:href="#yellow" class="move"></use>   
+  <path mask="url(#yellow_circle)" class="wave" d="M0 250.785h538.425V129.45l-9.567-12.713c-11.78-15.65-31.34-15.648-43.117 0l-9.564 12.713c-9.242 12.28-23.743 12.278-32.983 0l-9.567-12.713c-11.78-15.65-31.34-15.648-43.116 0l-9.57 12.713c-9.242 12.28-23.743 12.278-32.983 0l-9.568-12.713c-11.78-15.65-31.34-15.648-43.118 0l-9.568 12.713c-9.24 12.28-23.742 12.278-32.983 0l-9.565-12.713c-11.78-15.65-31.34-15.648-43.117 0l-9.568 12.713c-9.242 12.28-23.743 12.278-32.984 0l-9.567-12.713c-11.78-15.65-31.34-15.648-43.118 0l-9.567 12.713c-9.242 12.28-23.743 12.278-32.983 0l-9.568-12.713c-11.78-15.65-31.34-15.648-43.116 0L0 129.45v121.335z" fill="skyblue">
+  </path>
+</svg>
+
+<h2>svg mask-animation-03</h2>
+<svg width="400" height="200" style="background:#333;">
+  <defs>
+  <circle cx="50" cy="50" r="50" id="green_circle" fill="#fff">
+  </circle>
+  <mask id="green_mask">
+    <use xlink:href="#green_circle" class="move">
+      <style type="text/css">
+        .move {
+            animation: move 5s linear  infinite;
+        }
+    
+      </style>
+    </use>
+ </mask>
+ </defs>
+ <text x="10" y="100" mask="url(#green_mask)" fill="coral">
+   03Lorem ipsum dolor sit amet.
+ </text>
+</svg>
+
+<h2>svg mask-animation-04</h2>
+<svg width="400" height="200" style="background:rgb(7, 7, 7)">
+  <defs>
+  <rect x="10" y="10" width="100" height="200" id="withe_rect" fill="#fff">
+  </rect>
+  <mask id="white_mask">
+    <use xlink:href="#withe_rect" class="movespot">
+      <style type="text/css">
+       .movespot{
+          transform: translateX(0) scale(1);
+          animation: spotlight 10s alternate infinite;
+          transform-origin: center center;
+       }
+        @keyframes spotlight {
+          0% {
+            transform: translateX(0);
+          }
+          10% {
+            transform: translateX(0);
+          }
+          30% {
+            transform: translateX(350px);
+          }
+          50% {
+            transform: translateX(0);
+          }
+          70% {
+            transform: translateX(350px);
+          }
+          80% {
+            transform: translateX(200px);
+          }
+          90% {
+            transform: translateX(200px) scale(4.2);
+          }
+          100% {
+            transform: translateX(200px) scale(4.2);
+          }
+        }        
+      </style>
+    </use>
+ </mask>
+ </defs>
+ <text x="10" y="100" mask="url(#white_mask)" fill="#fff">
+   04Lorem ipsum dolor sit amet.
+ </text>
+</svg>
+
+<svg>
+  
+</svg>
+</body>
+</html>
