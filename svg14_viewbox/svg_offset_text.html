@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-ani-dasharry</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+	<style type="text/css">
+		svg{
+			border:1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+    <svg id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+   <h1>dasharry-dashoffset</h1>
+	 <h2>dashoffset-circle</h2>
+	 <pre>
+		<svg
+		width="100" height="100"
+		viewBox="0 0 100 100"
+		preserveAspectRatio="xMaxYMin meet">
+		...
+	</svg>
+	 </pre>
+   <svg width="300" height="300" viewBox="-20 -20 300 300">
+		<circle class="stroke_ani" cx="100" cy="100" r="100" 
+		style="fill:none;stroke-width:15px;stroke:#000; stroke-dasharray: 630px;" >
+		<style type="text/css">
+			@keyframes stroke_ani {
+				from {
+					stroke-dashoffset: 630;
+				}
+				to {
+					stroke-dashoffset: 0;
+					
+				}
+			}
+			<!-- 1260 -->
+			.stroke_ani{
+				animation:stroke_ani 3s infinite;
+			}
+		</style>
+		</circle>
+	 </svg>
+	 <h2>dashoffset-text</h2>
+	 <svg width="300" height="200">
+		<path class="text01" d="M 20 20 V 100 v-50 h 50 v-30 v80 l 50 0 l 0 -50" style="fill:none; stroke:#000; stroke-width:10px;stroke-dasharray: 390px;">
+		<style type="text/css">
+
+		 .text01{
+			 animation: text01 3s infinite;
+		 }
+     @keyframes text01{
+      from{
+				stroke-dashoffset: 390;
+			}
+			to{
+				stroke-dashoffset: 0;
+			}
+		 }
+		</style>
+		</path>
+	 </svg>
+	 <svg class="box1" width="600px" height="400px" viewbox="-50 -100 600 400">
+				 <path id="text-line" d="M100,250 C 100,50 400,50 400,250"/>
+				 <text>
+					<textPath xlink:href="#text-line" startOffset="5%">
+						SVG text can use the textPath element and 
+						path data to draw text that flows along the path.
+						<animate 
+						attributeName="startOffset" 
+						values="5%;70%;100%" 
+						dur="3s" 
+						repeatCount="indefinite" />
+				</textPath>
+			</text>
+	 </svg> 
+
+	 <h2>animateMotion</h2>
+ <svg width="5cm" height="3cm"  viewBox="0 0 500 300" >
+	 <path d="M100,250 C 100,50 400,50 400,250"
+				 fill="none" stroke="blue" stroke-width="7.06"  />
+				 
+	 <path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
+					fill="yellow" stroke="red" stroke-width="7.06"  >
+			<animateMotion 
+			dur="6s" 
+			repeatCount="indefinite"
+			path="M100,250 C 100,50 400,50 400,250"
+			rotate="auto" />
+	 </path>
+ </svg>
+
+<!-- 	 <script>
+		document.querySelector('.text01').getTotalLength(); 
+	 </script> -->
+</body>
+</html> 
