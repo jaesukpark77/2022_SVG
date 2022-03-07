@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>js-web40923</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+	<style>
+		svg {border:1px solid #000}
+	</style>
+</head>
+<body>
+	<svg id="back" width="100%" height="100%">
+		<defs>
+			<pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+			</pattern>
+			<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+				<rect width="100" height="100" fill="url(#smallGrid)"/>
+				<path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+			</pattern>
+		</defs>
+		<rect  width="100%" height="100%" fill="url(#grid)" />
+</svg>
+    <svg width="300" height="300">
+        <pattern id="star" width="10%" height="10%" viewBox="0 0 10 10">
+            <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+        </pattern>
+        <circle fill="url(#star)" cx="120" cy="120" r="100" stroke="url(#star)"" stroke-width="20"></circle>
+    </svg>
+    <h2>pattern-mask-yellow</h2>
+    <svg width="300" height="300">
+        <linearGradient id="gradi" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" style="stop-color:#fff"></stop>
+            <stop offset="50%" style="stop-color:rgb(56, 56, 56)"></stop>
+            <stop offset="100%" style="stop-color:#fff"></stop>
+        </linearGradient>
+        <rect fill="url(#gradi)" x="0" y="0" width="10" height="10"></rect>
+    </svg>
+</body>
+</html>

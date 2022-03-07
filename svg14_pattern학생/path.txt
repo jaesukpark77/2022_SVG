@@ -1,0 +1,40 @@
+  document.jqueryselector(' ').getTotalLength()
+<h2>dashoffset-text</h2>
+<path  d="M 20 20 V 100 v-50 h 50 v-30 v80 l 50 0 l 0 -50" >
+
+
+text-path
+ <path  d="M100,250 C 100,50 400,50 400,250"/>
+
+
+ <h2>animateMotion</h2>
+ <path d="M100,250 C 100,50 400,50 400,250"  />
+
+pattern
+<polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+
+<h2>pattern-stroke-star</h2>
+<polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+
+<h2>pattern-cube</h2>
+<path  d="M0 0l5 3v5l-5 -3z" fill="pink"/>
+<path  d="M10 0l-5 3v5l5 -3" fill="skyblue"></path>	
+
+
+pattern-ani
+<path id="cloud" class="cloud" d="M130,203 Q110,200 100,180 A35,35 0 1 1 100,120 A60,60 0 0 1 200,120 A35,35 0 1 1 200,180 Q190,200 170,203" style="fill:none; stroke-width:20px" />
+
+<path id="blot" class="bolt" d="M150,200 L120,240 L135,248 L120,280 L160,240 L140,235 Z" />
+
+cloud
+<path d="M100,180 A35,35 0 1 1 100,120 A60,60 0 0 1 200,120 A35,35 0 1 1 200,180 A70,70 0 0 1 100,180 Z" />
+<path class="rain" d="M150,210 Q125,245 150,250 Q175,245 150,210 Z" />
+
+sun
+<path d="M100,180 A35,35 0 1 1 100,120 A60,60 0 0 1 200,120 A35,35 0 1 1 200,180 A70,70 0 0 1 100 180 Z" />
+	<path class="sun_half" d="M100,120 A35,35 0 1 1 150,90" />
+	<path class="ray ray1" d="M70,100 L55,105" />
+	<path class="ray ray2" d="M70,70 L55,65" />
+	<path class="ray ray3" d="M98,45 L93,30" />
+	<path class="ray ray4" d="M140,50 L150,35" />
+	<path class="ray ray5" d="M160,80 L178,75" />

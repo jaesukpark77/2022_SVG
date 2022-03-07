@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>svg-viewport-viewBox</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+  <style type="text/css">
+   svg{border:1px solid #000}
+   pre{font-weight: bolder;}
+  </style>
+</head>
+
+<body>
+    <svg id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+   <h1>vg-viewport-viewBox</h1>
+  <pre>
+		SVG 캔버스(Canvas) 혹은 뷰포트(Viewport)
+		SVG 뷰박스(viewBox)
+	  SVG 캔버스는 "SVG 콘텐츠가 렌더링 되는 공간"이라고 기술합니다. 
+		캔버스는 공간 내에서 무한한 좌표 사용이 가능하지만, 
+		HTML 문서에서 렌더링은 설정된 캔버스의 너비, 높이 안에서만 이루어집니다. 
+		이 공간을 SVG 뷰포트라고 부릅니다. 
+	</pre>   
+   <h2>SVG 뷰포트(viewport)</h2>
+   <svg width="300" height="100">
+   </svg>
+   <h2>SVG 뷰박스(viewBox)</h2>
+   <pre>
+     viewBox 속성은 값으로 min-x, min-y, 
+     width, height숫자 배열 값을 전달 받습니다.
+      이 값은 뷰포트에 맵핑 되는 공간을 명시 하며, 
+     preserveAspectRatio 속성과 관계를 가집니다.
+     뷰포트와 뷰박스가 동일하면 같게 
+     뷰포트가 뷰박스 보다 작다면 축소 
+     뷰포트가 뷰박스보다 크다면 확대 
+    </pre>
+    <h3>동일하게 보이기</h3>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <circle  cx="30" cy="30" r="30">
+      </circle>
+    </svg>
+    <h3>viewBox2배</h3>
+    <pre>
+      멀리서 보는 효과 
+    </pre>
+    <svg width="100" height="100" viewBox="0 0 200 200">
+      <circle  cx="30" cy="30" r="30">
+      </circle>
+    </svg>
+    <h3>viewBox 축소</h3>
+    <pre>
+      가까이서 보는 효과 
+    </pre>
+    <svg width="100" height="100" viewBox="0 0 50 50">
+      <circle  cx="30" cy="30" r="30">
+      </circle>
+    </svg>
+    <h3>Panning</h3>
+    <pre>
+      오른쪽 이동-플러스 /왼쪽이동 마이너스
+      아래로 이동-플러스/위로 이동 마이너스
+      뷰박스가 이동하는 것임으로 콘텐츠 기준으로는 반대로 해야한다 
+    </pre>
+    <svg width="100" height="100" viewBox="-10 -10 100 100">
+      <circle  cx="30" cy="30" r="30">
+      </circle>
+    </svg>
+    <h3>PreserveAspectRatio</h3>
+    <pre>
+      preserveAspectRatio 속성을 사용합니다 viewBox 속성과 관련된 속성으로 
+      viewBox 속성이 설정되지 않으면 무시됩니다
+    </pre>
+    <h3>none preserveAspectRatio</h3>
+    <svg
+      width="100" height="100"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMaxYMin meet">
+      ...
+    </svg>
+      <pre>
+      none
+      가로:세로 비율을 보존하지 않습니다. (<meetOrSlide> 매개변수 값 무시)
+      </pre>
+      <svg
+      width="200" height="200"
+      viewBox="0 0 200 200"
+      preserveAspectRatio="none">
+      <image width="200" height="200"
+        xlink:href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+      >
+      </image>
+    </svg>
+    <pre>
+      https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio
+    </pre>
+      <pre>
+      xMinYMin
+      가로:세로 비율을 유지합니다. 뷰포트의 왼쪽 x, 상단 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMidYMin
+      가로:세로 비율을 유지합니다. 뷰포트의 가운데 x, 상단 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMaxYMin
+      가로:세로 비율을 유지합니다. 뷰포트의 오른쪽 x, 상단 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMinYMid
+      가로:세로 비율을 유지합니다. 뷰포트의 왼쪽 x, 중앙 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMidYMid
+      가로:세로 비율을 유지합니다. 뷰포트의 가운데 x, 중앙 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMaxYMid
+      가로:세로 비율을 유지합니다. 뷰포트의 오른쪽 x, 중앙 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMinYMax
+      가로:세로 비율을 유지합니다. 뷰포트의 왼쪽 x, 하단 y 축 값에 위치 시킵니다.
+      </pre>
+      <pre>
+      xMidYMax
+      가로:세로 비율을 유지합니다. 뷰포트의 가운데 x, 하단 y 축 값에 위치 시킵니다.
+     </pre>
+     <pre>
+      xMaxYMax
+      가로:세로 비율을 유지합니다. 뷰포트의 오른쪽 x, 하단 y 축 값에 위치 시킵니다.  
+    </pre>
+  <h3>meetOrSlice</h3>
+  <pre>
+    meet
+    가로:세로 비율을 유지합니다.
+    뷰박스와 뷰포트 크기가 다를 경우, 뷰박스를 뷰포트 안에 모두 표시합니다.
+
+    slice
+    가로:세로 비율을 유지합니다.
+    뷰박스와 뷰포트 크기가 다를 경우, 뷰박스를 잘라 화면에 표시합니다
+  </pre>
+</body>
+</html> 
