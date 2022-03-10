@@ -1,0 +1,148 @@
+      <script src="js/TweenMax.min.js"></script>
+    <script src="js/menu.js"></script>
+
+  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="fonts/vicons/vicons-font.css" type="text/css">
+
+<div class="wrap">
+    <div class="menu-wrapper">
+      <ul class="menu-items">
+        <li class="menu-item">
+          <button class="menu-item-button">
+            <i class="menu-item-icon icon icon-reply"></i>
+          </button>
+          <div class="menu-item-bounce"></div>
+        </li>
+        <li class="menu-item">
+          <button class="menu-item-button">
+            <i class="menu-item-icon icon icon-box"></i>
+          </button>
+          <div class="menu-item-bounce"></div>
+        </li>
+        <li class="menu-item">
+          <button class="menu-item-button">
+            <i class="menu-item-icon icon icon-trash"></i>
+          </button>
+          <div class="menu-item-bounce"></div>
+        </li>
+      </ul>
+        <button class="menu-toggle-button">
+          <i class="fa fa-plus menu-toggle-icon"></i>
+        </button>
+    </div>
+  </div>
+
+
+
+
+
+ <style>
+   .wrap{
+      position: fixed;
+      top:0;left:0;
+      width:100%;
+      height:100%;
+      /* background:#333; */
+    } 
+    .menu-wrapper{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80px;
+      height: 80px;
+      filter: url(#menu_goo_filter);
+      border:1px solid #000;
+    } 
+
+    .menu-items {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 40px;
+      border:1px solid red;
+    }
+    /* ul-오른쪽 왼쪽 반씩 내려감 */
+    .menu-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      margin-left: -40px;
+      margin-top: -40px;
+      border:1px solid blue;
+    }
+    .menu-item-button {
+      border: none;
+      outline: none;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: -40px;
+      /*fix*/
+      margin-top: -40px;
+      /*fix*/
+      background: coral;
+      color: #fff;
+      
+    }
+
+    .menu-item-bounce {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: -40px;
+      /*fix*/
+      margin-top: -40px;
+      /*fix*/
+      background: coral;
+      color: #fff;
+    }
+   
+    .menu-toggle-button {
+      border: none;
+      outline: none;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: -40px;
+      /*fix*/
+      margin-top: -40px;
+      /*fix*/
+      background: coral;
+      color: #fff;
+    }
+
+  </style>
+
+
+
+
+
+
+
+
+
+<svg class="menu_goosvg" style="border:1px solid #000;display:none">
+  <defs>
+    <filter id="menu_goo_filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur_menu" />
+      <feColorMatrix in="blur_menu" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -23" result="goo_menu" />
+      <feComposite in="SourceGraphic" in2="goo_menu" operator="atop"/>
+     <!--  <feBlend in="SourceGraphic" in2="goo" /> -->
+    </filter>
+  </defs>
+</svg>

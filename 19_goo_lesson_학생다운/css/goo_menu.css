@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.menu-wrapper{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;margin:auto;
+  width:60px;
+  height:60px;
+  filter: url("../svg_goo02_menu.html#menu_goo_filter");
+  border:1px solid #000;
+}
+/* ul */
+.menu-items {
+	position: absolute;
+	left:30px;
+	top: 30px;
+ 
+}
+/* li */
+.menu-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+}
+
+/* button */
+.menu-item-button {
+	width: 60px;
+	height: 60px;
+	margin-left: -30px;
+	margin-top: -30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #AD4C4C;
+}
+.menu-toggle-button,
+.menu-item-bounce,
+.menu-item-button {
+  border: none;
+	outline: none;
+	width: 80px;
+	height: 80px;
+  border-radius: 50%;
+  background: coral;
+	margin-left: -40px;/*fix*/
+	margin-top: -40px;/*fix*/
+	color: #fff;
+}
+
+/* 아이콘 모양 coral*/
+.menu-toggle-button {
+	background: transparent;
+	position: absolute;
+  left:30px;
+	top: 30px;
+
+}
+
+/* 아이콘 모양 +*/
+.menu-toggle-icon {
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+}
+
+/* li */
+.menu-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+}
+
+/* button */
+.menu-item-button {
+	width: 60px;
+	height: 60px;
+	margin-left: -30px;
+	margin-top: -30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #AD4C4C;
+}
+
+.menu-item-button:hover {
+	color: #fff;
+}
+/* 버튼밖div */
+.menu-item-bounce {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+
+

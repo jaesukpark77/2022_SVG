@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="html5,css3,js,portfolio">
+  <meta name="description" content="portfolio">
+  <meta name="author" content="cocomiz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+  <meta property="og:url" content="링크걸릴주소">
+  <meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+  <meta property="og:image" content="썸네일이미지 경로">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+  <!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+  <title>svg-social_goo</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
+  <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+        <style type="text/css">
+          .share {
+            position: relative;
+            max-width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            filter: url("#goo_social_filter");
+  
+          }
+  
+          .share-toggle-button,
+          .share-button {
+            border: none;
+            outline: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            line-height: 80px;
+            margin-left: -40px;
+            margin-top: -40px;
+            background: #333;
+            text-align: center;
+            color: #fff;
+  
+          }
+  
+          .share-button:hover,
+          .share-toggle-button:hover {
+            color: #fff;
+          }
+  
+          .share-button {
+            font-size: 30px;
+            background: #737070;
+            -webkit-transform: scale(0.95, 0.95);
+            transform: scale(0.95, 0.95);
+            color: #222;
+          }
+  
+          a.share-button {
+            color: #3D4444;
+          }
+  
+          a.share-button:hover,
+          a.share-button:focus {
+            color: #dfd7d7;
+          }
+  
+          .share-toggle-button {
+            z-index: 9;
+            background: #666;
+            font-size: 20px;
+          }
+  
+          .share-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+  
+          .share-item {
+            display: inline-block;
+          }
+        </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="share">
+      <button class="share-toggle-button">
+        <i class="share-icon fa fa-share-alt"></i>
+      </button>
+      <ul class="share-items">
+        <li class="share-item">
+          <a href="#" class="share-button">
+            <i class="share-icon fa fa-facebook"></i>
+          </a>
+        </li>
+        <li class="share-item">
+          <a href="#" class="share-button">
+            <i class="share-icon fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="share-item">
+          <a href="#" class="share-button">
+            <i class="share-icon fa fa-pinterest"></i>
+          </a>
+        </li>
+        <li class="share-item">
+          <a href="#" class="share-button">
+            <i class="share-icon fa fa-tumblr"></i>
+          </a>
+        </li>
+      </ul>
+
+      <svg>
+        <defs>
+          <filter id="goo_social_filter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur_social" />
+            <feColorMatrix in="blur_social" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+              result="goo_matrix" />
+            <feComposite in="SourceGraphic" in2="goo_matrix" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+
+
+    </div>
+    <!--wrap-->
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/share.js"></script>
+</body>
+
+</html>
