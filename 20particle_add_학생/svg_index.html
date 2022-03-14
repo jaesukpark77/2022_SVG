@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>ex-b</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+</head>
+
+<body>
+    <svg id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+	<svg class="bomb" width="1000" height="300" viewBox="-30 -50 1000 300" style="border: 1px solid #000">
+		<!-- <path class="circle" d="M96.5,43.2a8.21,8.21,0,0,0-11.24,3L78.79,57.42h0A72.21,72.21,0,1,0,131.59,89l7-12a8.21,8.21,0,0,0-3-11.24Z" fill="#000"/> -->
+		<path class="circle" d="M96.5,43.2a8.21,8.21,0,0,0-11.24,3L78.79,57.42h0A72.21,72.21,0,1,0,131.59,89l7-12a8.21,8.21,0,0,0-3-11.24Z" fill="none" stroke="#000"/>
+		<path d="M260,26.88c-15.68-28.38,50.4-35.16,71.16-14s8.47,50.84-38.12,50.84S210,22.67,184.63,21.38s-71.3,34.28-71.3,34.28" transform="translate(0 0)" fill="none" stroke="#231f20" class="fuse"/>
+	</svg>
+
+	<!-- <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script> -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js'></script>
+	<script  src="js/bomb.js"></script>
+</body>
+</html> 

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+header{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:300px;
+    border:1px solid #000;
+}
+h1{
+    width:100%;
+    height:100%;
+}
+
+h1>a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.particle{
+    position:absolute;
+    top:0;left:50%;
+    transform:translateX(-50%);
+    width:600px;
+}
+
+.particle path{
+    fill-opacity:0;
+}
+
+#parti_text{
+    fill:rgb(116, 116, 116);
+}
+
+main{
+    width:100%;
+    height:2500px;
+    margin-top:300px;
+    background: #608075;
+}

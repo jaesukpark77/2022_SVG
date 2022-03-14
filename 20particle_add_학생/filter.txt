@@ -1,0 +1,11 @@
+ <svg class="menu_goosvg" style="border:1px solid #000;display:none">
+      <defs>
+        <filter id="menu_goo_filter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur_menu" />
+          <feColorMatrix in="blur_menu" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 13 -9" 
+            result="goo_menu" />
+          <feComposite in="SourceGraphic" in2="goo_menu" operator="atop"/>
+         <!--  <feBlend in="SourceGraphic" in2="goo" /> -->
+        </filter>
+      </defs>
+    </svg> 

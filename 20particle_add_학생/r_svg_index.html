@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyword" content="html5,css3,js,portfolio">
+	<meta name="description" content="portfolio">
+	<meta name="author" content="cocomiz">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="제목에 뜰 내용(굵은글씨)">
+	<meta property="og:url" content="링크걸릴주소">
+	<meta property="og:description" content="제목아래쪽에 한줄 나오는 짧은 소개글">
+	<meta property="og:image" content="썸네일이미지 경로">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes,shrink-to-fit=no">
+	<!--[if IE]>
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<title>ex-b</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+	</script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+	</script>
+    <style>
+        .particle path{
+            fill-opacity:0;
+        }
+        #parti_text{
+            fill:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- <svg id="back" width="100%" height="100%">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ccc" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)"/>
+            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect  width="100%" height="100%" fill="url(#grid)" />
+    </svg> -->
+    <svg class="particle" width="1000" height="300" viewBox="0 0 1000 300">
+        <path d="M47.2,90.8V19.4h23.9l5.8,1.8l6.3,3.2l4.6,7.1v6.1l-1,6.8l-4.3,6l-5.3,3.3l-8.6,2H47.5h20.4
+        l20.7,35" />
+          <path d="M111.5,44.5l7.5-4.3l6.3-1.8l6.5-0.7l5,1.8l4.3,3.9l2.8,5.8l0.3,7.8v23.9v9.6l-0.3-9.6l-4.6,3.2
+        l-5,3.6l-5.7,2.5l-6.5,1.1l-5.3-1.8l-4.3-2.9l-3.2-4.6v-6.8l2.5-5.3l5.7-4.6l5.7-2.2l6.8-2.2l6.5-1l4-0.3h3.2" />
+          <path d="M171.5,91.2V38.3v12.8l5-5l4.6-4.2l3.6-2.2l5.3-1.5l3.5-0.3l5.4,1.5l3.2,2l2.5,3.6l2.2,5v41" />
+          <path d="M270.1,11.9v78.5V79.7l-5,5.1l-6.8,4.6l-6.8,1.8l-5.7-1.1l-5.8-2.5l-5.7-6.1l-3.6-8.2l-0.7-10
+        l2.5-11.8l6.1-9l8.5-4.3l6.8-0.7l7.1,2.5l4.6,2.8l4.6,4.3" />
+          <path d="M317.2,90.8h0.3l7.1-1.8l6.8-4.6l4.2-7.2l1.8-7.8l0.3-7.5l-1-6.8l-2.5-6l-3.6-4.6l-5-4.3
+        l-5.3-1.8l-5-0.3l-5.8,1l-5.3,3.3l-4.6,5.3l-2.5,5l-2.1,7.5v5.8l0.7,6.7l1.7,6.1l4.3,5.7l5,3.9l5.4,2.1L317.2,90.8" />
+          <path d="M362.2,91.2V38.7v11.8l5-4.3l4.6-3.9l4.3-2.8l5.3-1.5l4.6,0.7l3.2,1.5l3.6,3.5l2.5,6.1l0.7,7.5
+        v33.9V51.6l1.5-2.9l7.5-6.7l5.7-2.9l4.6-1.4l5,1.4l3.3,1.8l3.9,4.6l1.8,9.3v36.1" />
+        <g id="parti_text"></g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script  src="js/random.js"></script>
+</body> 
+</body>
+</html> 
